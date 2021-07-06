@@ -161,13 +161,13 @@ Use blank lines between parts of your code to improve readability. A good rule o
 ```java
 // Good
 int a = 1;
-int b = 2
+int b = 2;
 
 int c = add(a, b);
 
 // Bad
-int a = 1  
-int b = 2  
+int a = 1;
+int b = 2;
 int c = add(a, b);
 ```
 
