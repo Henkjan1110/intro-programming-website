@@ -172,7 +172,7 @@ int c = add(a, b);
 ```
 
 ###  No magic numbers
-With the exception of the additive and multiplicative identities (0 and 1), there should be no numbers appearing in the middle of your code. The reason for this is that those number are almost always tied to a specific application of your code, so that if the application changes the numbers must also change. If these number appear everywhere throughout your code, then you must replace it at every location. This is a lot of work and prone to errors. Instead, create a variable to store the number, which you can then easily change if the application changes.
+With the exception of the additive and multiplicative identities (0 and 1), there should be no numbers appearing in the middle of your code. The reason for this is that those number are almost always tied to a specific application of your code, so that if the application changes the numbers must also change. If these number appear everywhere throughout your code, then you must replace them at every location if the application changes. This is a lot of work and prone to errors. Instead, create a variable to store the number, which you can then easily change if the application changes.
 
 ```java
 // Good
