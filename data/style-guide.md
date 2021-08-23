@@ -13,6 +13,10 @@ When writing text in a ‘human’ language, you may structure your text into pa
 
 During this course we will also be using a style guide. This style guide will only contain some basic principles, as we do not want to overload you with too many things to learn at the same time. Most of them are 'common sense' rules, and IntelliJ will often already help you along by doing some things for you. Note that we may decide to stray slightly from the guide in case someone hands in something terrible that is not covered here.
 
+## Automatic style grading experiment
+
+As an experiment, we will be using CodeGrade to automatically check the style. This automatic testing of the style does not exactly correspond to the style guide, as some things are hard to automatically check. Furthermore, the automatic style checking also contains some extra things that commonly lead to mistakes. The automatic style grading will also be manually followed-up by a TA.
+
 In the course FEB22012 Programming in the second year, you will face a [much stricter and more extensive style guide](https://erasmusuniversityautolab.github.io/FEB22012-StyleGuide).
 
 ## The guidelines
