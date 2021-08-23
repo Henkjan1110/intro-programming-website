@@ -26,11 +26,14 @@ Next, download the code samples for this week from Canvas and open these in Inte
 <panopto src="https://eur.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=6cc47a12-c757-49c0-a9db-ac26010c104f&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all"></panopto>
 
 Step-by-step, the commands in the video are as follows:
-- Open IntelliJ IDEA.
-- Click on `Learn`
-- Click on `Import Local Source`
+- Open IntelliJ IDEA
+- Click on `My Courses` in the menu on the left
+- Click on `Start New Course`
+- Click again on `My Courses` in the menu on the left
+- Click on `Open course from disk`
 - Select the zip-file that you downloaded
-- Click `Start`
+- Click on `Start`
+- IntelliJ may ask whether you trust the project. Click on `Trust Project`
 - Select the `Hello World` task under the lesson `First Programming Code`
 
 ## Writing your first program
