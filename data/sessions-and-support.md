@@ -25,4 +25,4 @@ Each week there is a tutorial, where there will be a TA present to help you with
 If additional question pop up, that you were not be able to ask during the question hour or tutorial sessions, you can ask them on the `Canvas Discussion Board` of the course. We will try to regularly check the discussion board and answer any questions that pop-up. Note that if you ask a question here, all students in the course can see it and benefit from the answer. However, this also means that you have to make sure not to include any personal information or any part of a solution for an assignment in these questions.
 
 ### Email
-For any personal matters you should [send an email](mailto:feb21011@ese.eur.nl). Email is not intended to ask questions about the assignments or content of the course: such emails will be ignored.
+For any personal matters you should [send an email](mailto:feb21011@ese.eur.nl). Email is not intended for asking questions about the assignments or content of the course: such emails will be ignored.
