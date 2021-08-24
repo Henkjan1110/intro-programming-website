@@ -10,7 +10,7 @@ Support for this course will mainly be provided through scheduled sessions. For 
 ### Live sessions
 Due to the circumstances last year, the course used a format with lecture videos in addition to weekly 'live sessions'. This turned out to be a great success. So we will be repeating this format this year. The live sessions will generally consist of the following parts:
 - General announcements and thoughts about the topics of the week
-- live programming 
+- Live programming 
 - Q&A (using padlet)
 
 In the first week, the focus of the Q&A will be the setup of the course. The question hours last up to 1 hour and 45 minutes (depending on the amount of questions), and take place through  `Microsoft Teams`. You will automatically be added to the Teams page of this course, from where the question hour will be started. For installing and logging in to Teams, see the [manuals provided by the University](https://my.eur.nl/en/eur/ict-1/teams-chat-and-presence). 
