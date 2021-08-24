@@ -13,7 +13,7 @@ In this of this document, we discuss what plagiarism is and why it is bad, discu
 
 
 ### Why is plagiarism a problem? 
-####*the economics behind plagiarism*
+*the economics behind plagiarism*
 
 As we are at a school of economics, I feel like I owe you a better explanation than simply *'plagiarism is bad!'*. In addition, I hope that it also makes it easier to be able to determine for yourself if something is or is not allowed.
 
