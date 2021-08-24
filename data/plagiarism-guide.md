@@ -12,7 +12,9 @@ In this of this document, we discuss what plagiarism is and why it is bad, discu
 **TL;DR** *Make your assignments by yourself. Never share your code with others. Don't use the internet to look for (parts of) solutions to the graded assignments. If you get stuck, ask a TA or use the discussion board. We check for plagiarism with software and manually. If you get caught, you will likely get booted from the course or worse. A low grade that only counts for 10% is not the end of the world, and far better than jeopardising your diploma.*
 
 
-### Why is plagiarism a problem? (the economics behind plagiarism)
+### Why is plagiarism a problem? 
+*the economics behind plagiarism*
+
 As we are at a school of economics, I feel like I owe you a better explanation than simply *'plagiarism is bad!'*. In addition, I hope that it also makes it easier to be able to determine for yourself if something is or is not allowed.
 
 The goal of this course is to make you learn the basics of programming. This is hopefully something you desire as well. Unfortunately, experience has taught us (and probably yourself) that there exist many short-term temptations and distractions that hamper this learning process. To help you resist these temptations, we provide assessments which come with serious short-term consequences if you fail them. The hope is that the fear of such short-term consequences is enough to help you overcome the short-term temptations and distractions.
