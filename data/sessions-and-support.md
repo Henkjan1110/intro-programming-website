@@ -7,7 +7,7 @@ information_page: true
 
 Support for this course will mainly be provided through scheduled sessions. For an overview of when the sessions take place, see the [online timetable](https://timetables.eur.nl/schedule). Moreover, additional help can be obtained by posting questions on the course `Canvas Discussion Board` page.
 
-### Live Sessions
+### Live sessions
 Due to the circumstances last year, the course used a format with lecture videos in addition to weekly 'live sessions'. This turned out to be a great success. So we will be repeating this format this year. The live sessions will generally consist of the following parts:
 - General announcements and thoughts about the topics of the week
 - live programming 
@@ -15,7 +15,7 @@ Due to the circumstances last year, the course used a format with lecture videos
 
 In the first week, the focus of the Q&A will be the setup of the course. The question hours last up to 1 hour and 45 minutes (depending on the amount of questions), and take place through  `Microsoft Teams`. You will automatically be added to the Teams page of this course, from where the question hour will be started. For installing and logging in to Teams, see the [manuals provided by the University](https://my.eur.nl/en/eur/ict-1/teams-chat-and-presence). 
 
-### Lecture videos
+### Explanation videos
 Every week has a series of videos that become available on Monday through Canvas. Most videos are around 10-20 minutes in length, and each video discusses a topic from that week. You are recommended to watch the videos on Monday, as they are intended to get you started with the material of the week, and provide some further depth. After watching the videos, you should be well prepared to go through the material and practice exercises of the week.
 
 ### Tutorials
