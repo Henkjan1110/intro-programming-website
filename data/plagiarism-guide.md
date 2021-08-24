@@ -9,7 +9,7 @@ information_page: true
 
 In this of this document, we discuss what plagiarism is and why it is bad, discuss the use of the internet, provide some rules of thumb, explain what you should do if you get stuck, explain our enforcement of the rules, and discuss the consequences if you are caught. There is a subtle distinciton between plagiarism and fraud, but for the sake of simplicity we refer to both as *'plagiarism'* in this document.
 
-**TL;DR**:*Make your assignments by yourself. Never share your code with others. Don't use the internet to look for (parts of) solutions to the graded assignments. If you get stuck, ask a TA or use the discussion board. We check for plagiarism with software and manually. If you get caught, you will likely get booted from the course or worse. A low grade that only counts for 10% is not the end of the world, and far better than jeopardising your diploma.*
+**TL;DR** *Make your assignments by yourself. Never share your code with others. Don't use the internet to look for (parts of) solutions to the graded assignments. If you get stuck, ask a TA or use the discussion board. We check for plagiarism with software and manually. If you get caught, you will likely get booted from the course or worse. A low grade that only counts for 10% is not the end of the world, and far better than jeopardising your diploma.*
 
 
 ### Why is plagiarism a problem? (the economics behind plagiarism)
