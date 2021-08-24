@@ -1,3 +1,10 @@
+---
+path: "/plagiarism-guide"
+title: "Plagiarism guide"
+hidden: false
+information_page: true
+---
+
 # Plagiarism guide
 
 In this of this document, we discuss what plagiarism is and why it is bad, discuss the use of the internet, provide some rules of thumb, explain what you should do if you get stuck, explain our enforcement of the rules, and discuss the consequences if you are caught. There is a subtle distinciton between plagiarism and fraud, but for the sake of simplicity we refer to both as *'plagiarism'* in this document.
