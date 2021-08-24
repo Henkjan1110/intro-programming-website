@@ -25,6 +25,10 @@ const courseSettings = {
       title: "Style guide",
       path: "/style-guide",
     },
+    {
+      title: "Plagiarism guide",
+      path: "/plagiarism-guide",
+    },
     { separator: true, title: "Java Programming I" },
   ],
   sidebarFuturePages: [
