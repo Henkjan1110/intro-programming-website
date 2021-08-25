@@ -25,7 +25,7 @@ Next, download the code samples for this week from Canvas and open these in Inte
 
 <panopto src="https://eur.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=6cc47a12-c757-49c0-a9db-ac26010c104f&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all"></panopto>
 
-Step-by-step, the commands in the video are as follows:
+Note: an older version of IntelliJ is used in this video. If you are using the most recent version of IntelliJ, you can skip the steps from 0:15 to 0:32 in the video and instead follow these steps:
 - Open IntelliJ IDEA
 - Click on `My Courses` in the menu on the left
 - Click on `Start New Course`
