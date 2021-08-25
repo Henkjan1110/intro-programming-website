@@ -25,7 +25,7 @@ If plagiarism was easy to detect and deal with, we could simply give you zero po
 
 
 ### Use of the internet
-As explained about, plagiarism is forbidden because the work you hand in is no longer an accurate reflection of your understanding of the material. Relating to use of the internet, this can sometimes be confusing. When programming in a 'normal' setting, it is extremely common to use the internet as a source: why would you spend hours trying to solve a problem, if someone else has already solved it for you? 
+As explained above, plagiarism is forbidden because the work you hand in is no longer an accurate reflection of your understanding of the material. Relating to use of the internet, this can sometimes be confusing. When programming in a 'normal' setting, it is extremely common to use the internet as a source: why would you spend hours trying to solve a problem, if someone else has already solved it for you? 
 
 During a programming course, this is unfortunately a problem because you will learn how to solve such problems. This won't happen if you simply copy (important parts of) your solution from the internet. On the other hand, we do want you to also learn to use the internet as a source when programming.
 
