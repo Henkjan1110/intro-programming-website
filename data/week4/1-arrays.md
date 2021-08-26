@@ -354,7 +354,7 @@ int[] numbers = {100, 1, 42};
 So apart from calling for `new`, we can also initialize an array with a block, that contains comma-separated values to be assigned in the array. This works for all the types: below we initialize an array of strings, then an array of floating-point numbers. Finally, the values are printed.
 
 ```java
-String[] arrayOfStrings = {"Matti L.", "Matti P.", "Matti V."};
+String[] arrayOfStrings = {"Matthew L.", "Matthew P.", "Matthew V."};
 double[] arrayOfFloatingpoints = {1.20, 3.14, 100.0, 0.6666666667};
 
 for (int i = 0; i < arrayOfStrings.length; i++) {
@@ -364,9 +364,9 @@ for (int i = 0; i < arrayOfStrings.length; i++) {
 
 <sample-output>
 
-Matti L. 1.20
-Matti P. 3.14
-Matti V. 100.0
+Matthew L. 1.20
+Matthew P. 3.14
+Matthew V. 100.0
 
 </sample-output>
 
@@ -385,7 +385,7 @@ System.out.println(numbers[2]);
 Just like in ArrayLists, you can't access an index outside of the array. You can try out the following example on your own computer to see what happens in that case.
 
 ```java
-String[] arrayOfStrings = {"Matti L.", "Matti P.", "Matti V."};
+String[] arrayOfStrings = {"Matthew L.", "Matthew P.", "Matthew V."};
 double[] arrayOfFloatingpoints = {1.20, 3.14, 100.0, 0.6666666667};
 
 for (int i = 0; i < arrayOfFloatingpoints.length; i++) {
