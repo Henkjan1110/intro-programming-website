@@ -102,7 +102,7 @@ Person ball = joan;
 The statement `Person ball = joan;` creates a new Person variable `ball`, and copies the value of the variable `joan` as its value. As a result, `ball` refers to the same object as `joan`.
 
 
-<img src="../img/drawings/olio-joan-ja-ball.png"/>
+<img src="../img/drawings/person-joan-and-ball.png"/>
 
 Let's inspect the same example a little more thoroughly.
 
@@ -129,7 +129,7 @@ Joan Ball -- i.e. the Person object that the reference in the `joan` variable po
 
 An object's internal state is not copied when a variable's value is assigned. A new object is not being created in the statement `Person ball = joan;` -- the value of the variable ball is assigned to be the copy of  joan's value, i.e. a reference to an object.
 
-<img src="../img/drawings/olio-joan-ja-ball-2.png"/>
+<img src="../img/drawings/person-joan-and-ball-2.png"/>
 
 Next, the example is continued so that a new object is created for the `joan` variable, and a reference to it is assigned as the value of the variable. The variable `ball` still refers to the object that we created earlier.
 
@@ -159,7 +159,7 @@ Joan B., age 0 years
 
 So in the beginning the variable `joan` contains a reference to one object, but in the end a reference to another object has been copied as its value. Here is a picture of the situation after the last line of code.
 
-<img src="../img/drawings/olio-joan-ja-ball-3.png"/>
+<img src="../img/drawings/person-joan-and-ball-3.png"/>
 
 ## `null` value of a reference variable
 
@@ -184,7 +184,7 @@ ball = null;
 The situation of the program after the last line is depicted below.
 
 
-<img src="../img/drawings/olio-joan-ja-ball-null.png"/>
+<img src="../img/drawings/person-joan-and-ball-null.png"/>
 
 The object whose name is Joan Ball is referred to by nobody. In other words, the object has become "garbage". In the Java programming language the programmer need not worry about the program's memory use. From time to time, the automatic garbage collector of the Java language cleans up the objects that have become garbage. If the garbage collection did not happen, the garbage objects would reserve a memory location until the end of the program execution.
 
@@ -705,7 +705,7 @@ Now a person object has object variables `name` and `birthday`. The variable `na
 
 Both variables contain a reference to an object. Therefore a person object contains two references. In the image below, weight and height are not considered at all.
 
-<img src="../img/drawings/muhammad-ja-pascal.png"/>
+<img src="../img/drawings/muhammad-and-pascal.png"/>
 
 So the main program is connected to two Person objects by strands. A person has a name and a birthday. Since both variables are objects, these attributes exist at the other ends of the strands.
 
