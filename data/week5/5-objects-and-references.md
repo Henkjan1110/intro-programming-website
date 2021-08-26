@@ -84,7 +84,7 @@ Calling a constructor with the command `new` causes several things to happen. Fi
 A constructor call returns a reference to an object. A **reference** is information about the location of object data.
 
 
-<img src="../img/drawings/olio-joan.png"/>
+<img src="../img/drawings/person-joan.png"/>
 
 So the value of the variable is set to be a reference, i.e. knowledge about the location of related object data. The image above also reveals that strings -- the name of our example person, for instance -- are objects, too.
 
