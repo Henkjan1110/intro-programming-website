@@ -8,6 +8,7 @@ information_page: true
 In this page, we will guide you through the installation of IntelliJ on your personal computer.
 IntelliJ will be the default programming environment, the program in which you will write the code, that we use for this course.
 It comes pre-installed on university computers, so if you plan to only work from those you can skip the remainder of this page.
+If you run into issues installing the software, you can ask for help during the first week tutorial, on the discussion board or by sending an email to [feb21011@ese.eur.nl](mailto:feb21011@ese.eur.nl).
 
 ## Installation Video
 The following video shows how the installation looks like on Windows and guides you through the installation procedure.
