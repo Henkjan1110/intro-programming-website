@@ -63,6 +63,6 @@ Note that the software does not only compare your work to the work of your fello
 
 
 ### Consequences
-In every case that we suspect cheating, we are obliged to notify the Examining Board and provide evidence. The board will investigate and impose sanctions. The minimum sanction is typically that the grade is nullified and the student may not participate in the course for one year. In severe cases, the student can be terminated from the programme. In very severe cases, it may even be prosecuted as a felony offence under the Dutch criminal law code.
+In every case that we suspect cheating, we are obliged to notify the Examination Board and provide evidence. The board will investigate and impose sanctions. The minimum sanction is typically that the grade is nullified and the student may not participate in the course for one year. In severe cases, the student can be terminated from the programme. In very severe cases, it may even be prosecuted as a felony offence under the Dutch criminal law code.
 
 Any of the above sanctions can have dramatic consequences for your future. So, we strongly recommend you not to cheat.
