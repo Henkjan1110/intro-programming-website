@@ -36,6 +36,8 @@ Note: an older version of IntelliJ is used in this video. If you are using the m
 - IntelliJ may ask whether you trust the project. Click on `Trust Project`
 - Select the `Hello World` task under the lesson `First Programming Code`
 
+If you run into issues here, you can ask for help during the first week tutorial, on the discussion board or by sending an email to feb21011@ese.eur.nl.
+
 ## Writing your first program
 You are now ready to write your first program. In Java, our programs have to include some boilerplate code to function. It tells the computer what your program is called. Below, the name of the program is `HelloWorld`. This class name has to correspond to the name of the file that contains the source code (i.e., `HelloWorld.java`).
 
