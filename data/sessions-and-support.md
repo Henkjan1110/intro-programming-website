@@ -13,7 +13,7 @@ Due to the circumstances last year, the course used a format with lecture videos
 - Live programming 
 - Q&A (using padlet)
 
-In the first week, the focus of the Q&A will be the setup of the course. The question hours last up to 1 hour and 45 minutes (depending on the amount of questions), and take place through  `Microsoft Teams`. You will automatically be added to the Teams page of this course, from where the question hour will be started. For installing and logging in to Teams, see the [manuals provided by the University](https://my.eur.nl/en/eur/ict-1/teams-chat-and-presence). 
+In the first week, the focus of the live session will be the setup of the course. The live sessions last up to 1 hour and 45 minutes (depending on the amount of questions), and take place through  `Zoom`. See the Canvas page for the link. 
 
 ### Explanation videos
 Every week has a series of videos that become available on Monday through Canvas. Most videos are around 10-20 minutes in length, and each video discusses a topic from that week. You are recommended to watch the videos on Monday, as they are intended to get you started with the material of the week, and provide some further depth. After watching the videos, you should be well prepared to go through the material and practice exercises of the week.
