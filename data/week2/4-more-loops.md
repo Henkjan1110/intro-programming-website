@@ -320,7 +320,7 @@ First number?
 **3**
 Last number?
 **5**
-The sum is 12
+The sum is: 12
 
 </sample-output>
 
