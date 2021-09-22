@@ -68,9 +68,9 @@ System.out.println(artosAccount);
 System.out.println(artosSwissAccount);
 
 artosAccount.withdraw(20);
-System.out.println("The balance of Arto's account is now: " + artosAccount.balance());
+System.out.println("The balance of Arto's account is now: " + artosAccount);
 artosSwissAccount.deposit(200);
-System.out.println("The balance of Arto's other account is now: " + artosSwissAccount.balance());
+System.out.println("The balance of Arto's other account is now: " + artosSwissAccount);
 
 System.out.println("End state");
 System.out.println(artosAccount);
