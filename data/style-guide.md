@@ -141,8 +141,8 @@ You should use comments in order to indicate what certain segments of your code 
 Note that the following example contains an excessive amount of comments for the sake of the example. In practice, **no comments would be necessary here because the naming makes it obvious what the code does**.
 
 ```java
-/* Method that prints its two arguments
- * also prints "The numbers are:"
+/* Method that prints "The numbers are:",
+ * followed by its two arguments.
  */
 public static void printNumbers(int num1, int num2) {
 	// print the numbers
@@ -159,7 +159,7 @@ y = x + 7; // y becomes seven larger than x
 return x * y; // I return the result
 ```
 
-###  Blank lines
+### Blank lines
 Use blank lines between parts of your code to improve readability. A good rule of thumb is to use a blank line whenever the code is "semantically" different. For example, two assignment statement can be beneath each other. However, a subsequent method call should be seperated by a blank line.
 
 ```java
@@ -175,7 +175,7 @@ int b = 2;
 int c = add(a, b);
 ```
 
-###  No magic numbers
+### No magic numbers
 With the exception of the additive and multiplicative identities (0 and 1), there should be no numbers appearing in the middle of your code. The reason for this is that those number are almost always tied to a specific application of your code, so that if the application changes the numbers must also change. If these number appear everywhere throughout your code, then you must replace them at every location if the application changes. This is a lot of work and prone to errors. Instead, create a variable to store the number, which you can then easily change if the application changes.
 
 ```java
@@ -193,7 +193,7 @@ for (int i; i < 8; i++) {
 }
 ```
 
-###  Readability over compactness
+### Readability over compactness
 The goal of programming is not to write your code as compactly as possible, but to write it as readable (for humans) as possible. *Writing your code very compactly will not make it run faster in most cases*, but it will cause you to make more mistakes and it will make it more difficult for others to understand what you are doing. On the other hand, excessive code can also make it hard to understand what's going on. It is important to strike the right balance to make easy to understand for a human what your code does.
 
 ```java
