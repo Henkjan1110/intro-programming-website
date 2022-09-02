@@ -52,7 +52,7 @@ public class Program {
 }
 ```
 
-More precisely, input is read with the `scanner` tool's `nextLine()` reading method. The call `scanner.nextLine()` is left waiting for the user to write something. When user writes something and presses enter, the provided string is assigned to a the string variable `message`. The program is then able to reference the variable `message` later on, for instance to print the message. If you are running a program like this, you should enter a message in the console as if you were the user. The `reader.nextLine();` command reads the user's input and *returns* a string. If we then want to use the string in the program, it must be saved to a string variable -- `String message = scanner.nextLine();`. A value saved to a variable can be used repeatedly.
+More precisely, input is read with the `scanner` tool's `nextLine()` reading method. The call `scanner.nextLine()` is left waiting for the user to write something. When user writes something and presses enter, the provided string is assigned to a the string variable `message`. The program is then able to reference the variable `message` later on, for instance to print the message. If you are running a program like this, you should enter a message in the console as if you were the user. The `scanner.nextLine();` command reads the user's input and *returns* a string. If we then want to use the string in the program, it must be saved to a string variable -- `String message = scanner.nextLine();`. A value saved to a variable can be used repeatedly.
 
 <programming-exercise name='Message'>
 
