@@ -6,9 +6,9 @@ hidden: false
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
 
-- Understand the process of programming, including the role of source code, basic instructions, and programming languages in creating computer programs.
+  - Learn what programming is.
 
-- Learn about the characteristics of the Java programming language. The key points are its object-oriented design, popularity, and platform-independence.
+- Learn about the main characteristics of the Java programming language.
 
 </text-box>
 
@@ -25,3 +25,11 @@ One key factor in Java's popularity is that it is platform-independent, meaning 
 In this course, you will become familiar with some of the most important concepts of Java.
 In essence, our aim is that you will be able to write simple Java programs after this course that you can use during your studies.
 Moreover, this will provide you with a first stepping stone to learn more advanced programming concepts, either in follow-up courses or by self-study.
+
+<text-box variant='learningObjectives' name='Summary'>
+In this part, we have 
+  - learned about the process of programming. The key thing to remember is that a `program` is made by writing `source code` that is written in a `programming language`, and translated to `basic instructions` for the computer to process.
+
+- learned about the main characteristics of Java. Its key features are its object-oriented design, popularity, and platform-independence.
+
+</text-box>
