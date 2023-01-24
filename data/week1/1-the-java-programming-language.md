@@ -28,6 +28,7 @@ Moreover, this will provide you with a first stepping stone to learn more advanc
 
 <text-box variant='learningObjectives' name='Summary'>
 In this part, we have 
+  
   - learned about the process of programming. The key thing to remember is that a `program` is made by writing `source code` that is written in a `programming language`, and translated to `basic instructions` for the computer to process.
 
 - learned about the main characteristics of Java. Its key features are its object-oriented design, popularity, and platform-independence.
