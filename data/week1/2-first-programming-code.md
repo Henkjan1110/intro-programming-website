@@ -54,7 +54,7 @@ Program execution begins after the line `public static void main(String[] args) 
 Note that, while our examples may not always display the template, it is actually required for every program file. As such, our examples might be a single line, such as example below illustrating the print command.
 
 ## Actual code
-Let's write our first code! We will consider the statement:
+Let's write our first code between the curly brackets in the example! We will consider the statement:
 ``` Java
 System.out.println("Hello World!");
 ```
@@ -98,6 +98,6 @@ Even though running a program is straightforward, a complex process happens in t
 
 This compile process influences error detection and feedback. The compiler can check for errors before the program is executed, and the IDE (Integrated Development Envirnoment) provides immediate feedback on any issues.
 
-The IDE makes the process easy by allowing the programmer to compile and execute the program with a single button press. It also continuously compiles the program, enabling it to report errors. For instance, changing the Hello World exercise print command to `System.out.println("Hello World!")` will result in a line underlining and an error notification on the left side.  
+The IDE makes the process easy by allowing the programmer to compile and execute the program with a single button press. It also continuously compiles the program, enabling it to report errors. For instance, changing the Hello World exercise print command to `System.out.println("Hello World!")`, by removing the semi-colon, will result in a line underlining and an error notification on the left side.  
 
 </text-box>
