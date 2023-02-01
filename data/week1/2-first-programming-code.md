@@ -13,20 +13,20 @@ hidden: false
 </text-box>
 
 In this lesson, you will write your first programming code in Java.
-Our goal is to write a program that prints the text `Hello World!` when run.
-To create this program, we will walk you through all necessary steps.
+The goal is to write a program that prints the text `Hello World!` on execution.
+We will guide you through the process step by step. 
 
 ## Setting up for Coding
 First, make sure that you have IntelliJ set-up.
 When working on a campus computer, this should already be the case.
-When working on your own computer, see [the installation instructions](/installation) for setting up.
+When working on your own computer, see [the installation instructions](/installation) for the necessary steps.
 
-Next, download the code samples for this week from Canvas and open these in IntelliJ. The below video shows you how to do this:
+Next, download the code samples for this week from Canvas and open these in IntelliJ. The video below demonstrates you how to do this:
 
 <panopto src="https://eur.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=6cc47a12-c757-49c0-a9db-ac26010c104f&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all"></panopto>
 
-Note: an older version of IntelliJ is used in this video. If you are using the most recent version of IntelliJ, you can skip the steps from 0:15 to 0:32 in the video and instead follow these steps:
-- Open IntelliJ IDEA
+Note: an older version of IntelliJ is used in this video. If you are using the most recent version of IntelliJ, you can skip the steps from 0:15 to 0:32 in the video and follow these steps instead:
+- Open the IntelliJ IDEA
 - Click on `My Courses` in the menu on the left
 - Click on `Start New Course`
 - Click again on `My Courses` in the menu on the left
@@ -39,7 +39,8 @@ Note: an older version of IntelliJ is used in this video. If you are using the m
 If you run into issues here, you can ask for help during the first week tutorial, on the discussion board or by sending an email to feb21011@ese.eur.nl.
 
 ## Writing your first program
-You are now ready to write your first program. In Java, our programs have to include some boilerplate code to function. It tells the computer what your program is called. Below, the name of the program is `HelloWorld`. This class name has to correspond to the name of the file that contains the source code (i.e., `HelloWorld.java`).
+You are now ready to write your first program. In Java, programs require some mandatory code (known as boilerplate code) to indicate the program's name to the computer. Our program name is `HelloWorld` and has to correspond to the name of the file that contains the source code (i.e., `HelloWorld.java`).
+
 
 ```java
 public class HelloWorld {
@@ -48,19 +49,21 @@ public class HelloWorld {
     }
 }
 ```
-Execution of the program starts from the line that follows `public static void main(string[] args) {`, and ends at the closing curly bracket `}`. Do not worry if this template seems intimidating now, it will become very familiar over this course.
-The examples in the material will not always show the template, but you can assume that your program file always needs one. As such, the examples might be as short as a single line, such as the example below that illustrates the print command.
+
+Program execution begins after the line `public static void main(String[] args) {` and concludes at the final `}`. Although the template may seem overwhelming, it will become a familiar concept throughout the course. 
+Note that, while our examples may not always display the template, it is actually required for every program file. As such, our examples might be a single line, such as example below illustrating the print command.
 
 ## Actual code
-Between the curly brackets in the above example, you can write your code. Let's write our first code! We will consider the statement:
+Let's write our first code between the curly brackets in the example! We will consider the statement:
 ``` Java
 System.out.println("Hello World!");
 ```
-Note that source code is written line-by-line and is read from left-to right. Moreover, each statement should be terminated by a semicolon (`;`), which indicates the end of the statement.
 
-The statement that we have used is part of the Java programming language and is used to print out text to the console, which will appear when running your code. The text that should be printed is given between the brackets, in this case `Hello World!`. Note that the printed text should be surrounded by quotation marks (`""`), which will not be printed themselves.
+Note that source code is read line-by-line, from left to right, with each statement ending with a semicolon (`;`).
 
-Your program should now look like:
+The statement used in this program is specific to Java and outputs text to the console during program execution. The text to be printed is specified within the brackets, in this case `Hello World!`. Note that it's important to surround the printed text with quotation marks (`""`), which are not printed themselves.
+
+When adding our cade to the template again, our code looks like this:
 ``` Java
 public class HelloWorld {
   public static void main(String[] args) {
@@ -87,14 +90,14 @@ You can check your code by clicking on the `Check` button that is shown in the b
 </programming-exercise>
 
 ## Running the code
-You are now ready to run your code! To run this program, click on the green triangle has appeared in the margin and click on `run`. You can also use the keyboard shortcut `Ctrl + Shift + F10`. If you followed the above steps, you should now see that the text "Hello World!" is printed to the console, which you can read under the `Run` tab which has opened at the bottom of your screen. If you want to rerun your code, you can click on the green triangle in the top right corner, or use the keyboard shortcut `Shift + F10`.
+You are now ready to run your code! To run this program, click on the green triangle has appeared in the margin and click on `run`. You can also use the keyboard shortcut `Ctrl + Shift + F10`. If you followed the above steps, you should now see that the text "Hello World!" is printed to the console, which you can read under the opened `Run` tab at the bottom of your screen. If you want to rerun your code, you can click on the green triangle in the top right corner, or use the keyboard shortcut `Shift + F10`.
 
 <text-box variant="hint" name="Running code">
+  
+Even though running a program is straightforward, a complex process happens in the background. The Java compiler first converts the source code into Java bytecode. Then, the program is executed by a Java interpreter, executing the commands one by one.
 
-Even though running the program is straightforward, a lot is happening behind the scenes. When a program is run, the source code is first compiled into Java bytecode. This compilation process is done by Java compiler, which itself is a program. Following that, the program gets executed, meaning the commands are executed one-by-one by a Java-interpreter that is able to read Java bytecode.
+This compile process influences error detection and feedback. The compiler can check for errors before the program is executed, and the IDE (Integrated Development Envirnoment) provides immediate feedback on any issues.
 
-This compile process affects how and when errors occur. When a program is compiled before execution, the compiler can search for errors in it. This also affects the hints provided by the IDE (Integrated Development Environment), and in this way, the programmer can receive immediate feedback on any errors.
-
-The IDE both compiles and executes the program with just one press of a button. However, the programming environment compiles the program continuously, so it can report errors. You can, for example, try to change the above Hello World exercise print command to `System.out.println("Hello World!")` -- what you'll notice is that the line will be underlined and you'll be notified of an error on the left-hand side.
+The IDE makes the process easy by allowing the programmer to compile and execute the program with a single button press. It also continuously compiles the program, enabling it to report errors. For instance, changing the Hello World exercise print command to `System.out.println("Hello World!")`, by removing the semi-colon, will result in a line underlining and an error notification on the left side.  
 
 </text-box>
