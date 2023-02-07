@@ -53,7 +53,7 @@ public class Program {
 ```
 
 
-Input is read using the `scanner` tool's `nextLine()` method. The `nextLine()` call waits for the user to enter text and press enter. The entered text is then assigned to the string variable `message`. The program can reference the `message` variable later, for example to print it. When running the program, enter a message in the console as if you were the user. The `nextLine()` command reads the input and *returns* it as a string. To use the returned string in the program, it must be saved to a string variable (e.g. `String message = scanner.nextLine();`). A value saved in a variable can be reused.
+Input is read using the `scanner` tool's `nextLine()` method. The `nextLine()` call waits for the user to enter text and press enter. The entered text is then assigned to the `String` variable `message`. The program can reference the `message` variable later, for example to print it. When running the program, enter a message in the console as if you were the user. The `nextLine()` command reads the input and *returns* it as a `String`. To use the returned `String` in the program, it must be saved to a `String` variable (e.g. `String message = scanner.nextLine();`). A value saved in a variable can be reused.
 
 <programming-exercise name='Message'>
 
@@ -97,7 +97,7 @@ Once upon a time...
 </programming-exercise>
 
 ## Input String as a Part of Output
-To integrate user input with other text as output, we use the concept of `Strings`. A `String` is a piece of text for which we can use the `System.out.println` command to print. To join two pieces of text (`Strings`), we use the addition (`+`) operator. An example of this can be seen in the following program, that takes user input and combines it with another piece of text to print it as final output.
+To integrate user input with other text as output, we use the addition (`+`) operator to join two pieces of text (`String`s) together. An example of this can be seen in the following program, that takes user input and combines it with another piece of text to print it as final output.
 
 
 ```java
@@ -166,7 +166,7 @@ Hi Lily
 ## Program Execution Waits for Input
 When the program's execution reaches a statement that attempts to read input from the user (the command `reader.nextLine()`), the execution stops and waits. The execution continues only after the user has written some input and pressed enter.
 
-In the example below, the program prompts the user for three strings. First, the program prints `Write the first string: `, and then waits for user input. Once the user has entered a string and pressed enter, the program prints the next prompt and waits for another string. This process repeats for three strings in total. After the program has received all three strings, it prints them. Note that if the scanner is done receiving input, the scanner should be closed. If you don't close it, no error will be shown, but you will get deductions in style points anyway.
+In the example below, the program prompts the user for three strings. First, the program prints `Write the first string: `, and then waits for user input. Once the user has entered a string and pressed enter, the program prints the next prompt and waits for another string. This process repeats for three strings in total. After the program has received all three strings, it prints them. Note that if the scanner is done receiving input, the scanner should be closed.
 
 ```java
 import java.util.Scanner;
