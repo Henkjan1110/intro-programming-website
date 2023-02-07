@@ -6,18 +6,18 @@ hidden: false
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
 
-- Understand the concept of a variable. You know what variable types, names, and values are.
+- Understand the concept of a variable. Know what variable types, names, and values are.
 
 - Know how to create and use string, integer, floating-point, and boolean variables.
 
 </text-box>
 
-You saw some first examples of variables when dealing with user input in the last section. Let's turn our attention to learning about variable *types* commonly used in Java. A variable can be thought of as a container in which information of a given type can be stored. Examples of these different types include text (`String`), whole numbers (`int`), floating-point numbers (`double`), and whether something is true or false (`boolean`). A value is assigned to a variable using the equals sign (`=`).
+In the previous section, you learned about variables in the context of user input. Now, let's examine the common variable *types* used in Java. A variable can be thought of as a container that holds information of a specific type such as text (`String`), whole numbers (`int`), floating-point numbers (`double`), or whether something is true or false (`boolean`). To assign a value to a variable, use the equals sign (`=`).
 
 ```java
 int months = 12;
 ```
-In the statement above, the value of 12 is assigned to an integer variable called months. The statement could be read as: "the variable months is assigned the value 12". A variable's value can be printed together with a string using the + sign, as seen in the following example.
+The Java code `int months = 12;` above assigns the value 12 to an integer variable named `months`. This statement can be read as "the variable months is assigned the value 12". To print the variable's value along with a string, the addition operator (`+`) can be used, as can be seen in the examples below.
 
 ```java
 String text = "contains text";
@@ -41,13 +41,13 @@ Boolean: true
 
 </sample-output>
 
-Be aware that the printing of variables does not require quotation marks. If you added those, the name of the variable (e.g., `text` for the first print statement) will be printed, instead of its content.
+It is important to note that when printing variables, you do not need to use quotation marks. If you do, the name of the variable, such as `text` in `System.out.println("text");`, will be printed instead of its value. To correctly print the value of a variable, simply use the variable without quotation marks, for example `System.out.println(text);`.
 
 <programming-exercise name="Recipe">
 
 The template for this assignment already contains code to print a recipe consisting of milk and flour. In the print statements, two variables are used: an `int` variable named `gramsOfMilk` and a `double` variable `kilosOfFlour`. The first variable indicates the amount of milk, in grams, while the second indicates the amount of flour, in kilo's.
 
-Complete the assignment in such a way, by declaring both variables with the correct amount, such that the following output is printed:
+Complete the assignment by declaring both variables with the correct amount, such that the following output is printed:
 
 <sample-output>
 
@@ -59,7 +59,7 @@ Kilo's of flour: 1.5
 
 </programming-exercise>
 
-Variable names are unique - no two variables can have the same name. The variable is created the first time its declared, but the second time you try to declare a variable with the same name, your compiler will give an error. The following program would thus lead to an error, as the variable pi is declared twice:
+Variable names are unique in Java, and therefore no two variables can have the same name. A variable is created when it is declard for the first time. If you try to declare a variable with the same name a second time, your compiler will give an error. The following program would thus lead to an error, as the variable pi is declared twice:
 
 ```java
 public class Example {
@@ -73,7 +73,7 @@ public class Example {
 ```
 
 ## Changing a Value Assigned to a Variable
-A variable exists from the moment of its declaration, and its initial value is preserved until another value is assigned to it. You can change a variable's value using a statement that comprises the variable name, an equals sign, and the new value to be assigned. Note that when changing the value of the variable, we do not declare the type of the variable again, as this has already been determined when the variable was declared.
+A variable is created at the time of its declaration and holds its initial value until a new value is assigned to it. To change the value of a variable, use a statement that includes the variable name, an equals sign, and the new value. The type of the variable does not need to be declared again as it has already been specified when the variable was first declared.
 
 ```java
 int number = 123;
@@ -110,7 +110,7 @@ The variable is then referenced again by its name in the program. We proceed as 
 At the end of the program, you'll notice that the original value of the variable has vanished. A variable can hold only one value at a time.
 
 ## Variable's Type Persists
-Once a variable's type has been declared, it can no longer be changed. For example, a boolean value cannot be assigned to a variable of the integer type, nor can an integer be assigned to a variable of the boolean type. However, exceptions do exist: an integer can be assigned to a variable of the double type, since Java knows how to convert an integer to a double. A floating-point value cannot, however, be assigned to an integer variable. The reason for this is that those who develop the language aim to prevent developers from making errors that lead to a loss of information.
+It is important to note that once the type of a variable has been declared, it cannot be changed. There are strict type compatibility rules in Java that prevent a value of one type from being assigned to a variable of a different type. For instance, a boolean value cannot be assigned to an integer variable and vice versa. However, there are exceptions such as assigning an integer to a double variable, as Java can automatically convert integers to doubles. On the other hand, a floating-point value cannot be assigned to an integer variable as this can result in a loss of information. These restrictions are in place to prevent programming errors and ensure data integrity.
 
 ```java
 double floatingPoint = 0.42;
@@ -120,22 +120,23 @@ int value = 10;
 value = floatingPoint; // Does not work
 ```
 
-There are also other ways of translating variable types back and forth. For instance, if you are sure that a String contains an integer value, you can transform it to another variable of the type `int`. Make a new integer variable and use the Integer.valueOf(name) method. This method takes the string `name` containing the value to be converted as a parameter. In the following example, the value 42 is of type `String` and will be of type `int`.
+In Java, it is possible to convert a string containing an integer value to an integer variable by using the `Integer.valueOf(name)` method. This method takes a string argument, in this case `name`, which contains the value to be converted. The following example demonstrates how to convert a `string` "42" to an `int`. Note that it is important to make sure that the string contains an integer value before attempting the conversion.
 
 ```java
 String valueAsString = "42";
 int value = Integer.valueOf(valueAsString);
 ```
 
-This also works for double values and boolean values, with the method `Double.valueOf()` and `Boolean.valueOf`, respectively. It takes the string containing the value to be converted as a parameter. Boolean variables can either have the value `true` or `false`. When converting a string to a boolean, the string must be "true" if we want the boolean value to be `true`. The case is insensitive here: both "true" and "TRue" turn into the boolean value of `true`. All other strings turn into the boolean `false`.
+It is also possible to convert a string to a double or a boolean value. The methods used for these conversions are `Double.valueOf()` and `Boolean.valueOf()`, respectively. Both methods take a string argument, which contains the value to be converted. When converting a string to a boolean, the string must be "true" for the resulting boolean value to be `true`. The case sensitivity of the string is ignored, so both "true" and "TRUE" result in the boolean value of `true`. Any other string results in a boolean value of `false`.
 
 ## Naming Variables
-Naming variables is a fundamental aspect of describing a program. It is important that you name your variables as understandable as possible. Programming is a problem-solving tool. The aim is to create solutions for any given problem. As a problem is approached, the developer decides on the terms used to describe the problem domain. The terminology that is chosen, such as variable names, will serve to describe the problem for anyone who is to work with it in the future.
-As you're wording the problem that you're solving, think about the concepts related to that problem and appropriate terms that could be used to describe them. If you find it hard to come up with relevant names, think of the ones that definitely do not describe it. After this, settle on some terminology that you're going to use -- the good thing is that you can usually improve on it later on.
+Naming variables is a critical aspect of describing a program. It's essential to name your variables in a way that is easily understood by others. When approaching a problem, the developer decides on the terms used to describe the problem domain. The terminology, including variable names, must accurately describe the problem for anyone who may work with it in the future.
 
-Unfortunately, variable naming is limited by certain constraints. Variable names cannot contain certain special symbols, such as exclamation marks (!). Spaces are also not allowed, since they're used to separate parts of commands. Instead of spaces, the convention in Java is to use a style known as [camelCase](https://en.wikipedia.org/wiki/Camel_case "Camel case – Wikipedia"), which means that we write every word part with an uppercase letter. However, the first letter of a variable name is **always lower-cased**, for example: `int camelCaseVariable = 7;`
+As you're defining the problem you're trying to solve, think about the concepts related to that problem and the appropriate terms that can describe them. If it's challenging to come up with relevant names, consider the terms that definitely don't describe the problem. Settle on some terminology that you'll use, and keep in mind that you can always improve it later.
 
-Numbers can be used within a variable name as long as the name does not begin with a number. A variable's name also cannot already be in use. These names include, for instance, variables previously defined in the program and commands provided by Java. Letters containing diacritics (e.g. the letters ä and ö) should also not be used in variable names.
+Unfortunately, variable naming is limited by certain constraints. Names cannot contain certain special symbols, such as exclamation marks (!). Spaces are also not allowed, since they're used to separate parts of commands. The convention in Java is to use a style known as [camelCase](https://en.wikipedia.org/wiki/Camel_case "Camel case – Wikipedia"), which makes us write every word part with an uppercase letter. However, the first letter of a variable name is **always** lower-cased, for example: `int camelCaseVariable = 7;`
+
+Numbers are allowed within a variable name as long as it does not start with a number. Also, the name cannot already be in use, including names of variables previously defined in the program or commands provided by Java. Diacritical letters, such as ä and ö, should not be used in variable names.
 
 ### Permissible Variable Names
 
