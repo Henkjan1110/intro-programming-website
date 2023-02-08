@@ -59,7 +59,7 @@ Kilo's of flour: 1.5
 
 </programming-exercise>
 
-Variable names are unique in Java, and therefore no two variables can have the same name. A variable is created when it is declard for the first time. If you try to declare a variable with the same name a second time, your compiler will give an error. The following program would thus lead to an error, as the variable pi is declared twice:
+Variable names are unique in Java, and therefore no two variables can have the same name. A variable is created when it is declared for the first time. If you try to declare a variable with the same name a second time, your compiler will give an error. The following program would thus lead to an error, as the variable pi is declared twice:
 
 ```java
 public class Example {
