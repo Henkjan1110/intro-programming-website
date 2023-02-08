@@ -26,7 +26,7 @@ Hello World!
 
 </sample-output>
 
-The same command can be used to print other text as well. For example, to print ``Goodbye!``, we would again use the `System.out.println` command, but now putting a different value between the brackets. For example, we could use the command as follows:
+The same command can be used to print other text as well. For example, to print ``Goodbye!``, we would again use the `System.out.println` command, but now putting a different value between the brackets. This would look as follows:
 ``` Java
 System.out.println("Goodbye!")
 ```
@@ -38,10 +38,9 @@ Goodbye!
 
 </sample-output>
 
-The text within the brackets of a function (in this case `System.out.println`) is referred to as an `argument` and can be any text enclosed in quotation marks `""`. Our first example used `"Hello World!"` as an argument, while the second used `"Goodbye!"`.
+The text within the brackets of a function (in this case `System.out.println`) is referred to as an `argument` and can be any text. Our first example used `"Hello World!"` as an argument, while the second used `"Goodbye!"`. But we can use any text, as long as long as it is enclosed in quotation marks `""`.
 
-
-The text within the brackets of a function (in this case System.out.println) is referred to as an argument and can be any text. Our first example used "Hello World!" as an argument, while the second used "Goodbye!". But we can use any text, as long as long as it is enclosed in quotation marks "".
+<programming-exercise name="Goodbye">
 
 The template for this assignment already contains the boilerplate that is needed for the assignment:
 ```java
