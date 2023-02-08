@@ -53,7 +53,7 @@ public class Program {
 ```
 
 
-Input is read using the `scanner` tool's `nextLine()` method. The `nextLine()` call waits for the user to enter text and press enter. The entered text is then assigned to the `String` variable `message`. The program can reference the `message` variable later, for example to print it. When running the program, enter a message in the console as if you were the user. The `nextLine()` command reads the input and *returns* it as a `String`. To use the returned `String` in the program, it must be saved to a `String` variable (e.g. `String message = scanner.nextLine();`). A value saved in a variable can be reused.
+Input is read using the `scanner` tool's `nextLine()` method. The `nextLine()` call waits for the user to enter text and press enter. The entered text is then assigned to the `String` variable `message`, where `String` is the variable type used in Java to store text. The program can reference the `message` variable later, for example to print it. When running the program, enter a message in the console as if you were the user. The `nextLine()` command reads the input and *returns* it as a `String`. To use the returned `String` in the program, it must be saved to a `String` variable (e.g. `String message = scanner.nextLine();`). A value saved in a variable can be reused.
 
 <programming-exercise name='Message'>
 
