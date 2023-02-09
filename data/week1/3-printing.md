@@ -8,7 +8,9 @@ hidden: false
 
 - Learn to write a program that prints text.
 
-- Know what an "argument" is.
+- Learn what an "argument" is.
+    
+- Learn about code style and code comments.
 
 </text-box>
 
@@ -24,11 +26,11 @@ Hello World!
 
 </sample-output>
 
-The same command can be used to print other text as well. For example, we might want to say goodbye as well. We would then again use the `System.out.println` command, now putting a different value between the brackets. For example, we could use the command as follows:
+The same command can be used to print other text as well. For example, to print ``Goodbye!``, we would again use the `System.out.println` command, but now putting a different value between the brackets. This would look as follows:
 ``` Java
 System.out.println("Goodbye!")
 ```
-This then leads to the below output being printed to the console.
+This leads to the below output being printed to the console.
 
 <sample-output>
 
@@ -36,7 +38,7 @@ Goodbye!
 
 </sample-output>
 
-The input that we give between brackets is referred to as an `argument` of the function. In the first case, we gave as argument to the function `System.out.println` the text ``"Hello World!"``, while in the second case our argument was ``"Goodbye!"``. Note that we can use any argument to this function, as long as it is composed of text, as indicated by the quotation marks `""` around the text that we want to print.
+The text within the brackets of a function (in this case `System.out.println`) is referred to as an `argument`. Our first example used `"Hello World!"` as an argument, while the second used `"Goodbye!"`. But we can use any text, as long as long as it is enclosed in quotation marks `""`.
 
 <programming-exercise name="Goodbye">
 
@@ -64,7 +66,8 @@ You can check your code by clicking on the `Check` button that is shown in the b
 
 
 ## Printing Multiple Lines
-Programs are constructed command-by-command, where each command is placed on a new line. In the example below, the command `System.out.println` appears twice, which means that two print commands are being executed in the program.
+
+Programs are built by adding commands one by one, each on a new line. In the example, there are two instances of the `System.out.println` command, meaning that the program executes two print statements.
 
 ```java
 public class Example {
@@ -87,10 +90,10 @@ Hello world!
 
 <text-box variant=hint name="Assignment guidelines">
 
-  The guidelines in the assignments regarding the print format are very precise. If the assignment expects you to print a parenthesis, you must print the parenthesis.
-  This preciseness with regard to the output is relevant in programming in general. Missing a single character may cause an error. Novice programmers often enter a comma instead of a dot, and write, for instance `printin` instead of `println`, leave out apostrophes, or forget the semicolon after a command. Any one of these would cause an error and cause the program execution to fail.
-  Learning programming is, in fact, a path full of mistakes -- and every error message is a chance to learn. Keep a look out for any red signs and try to read the test errors!
-
+ The format for printing in assignments is strictly specified. If a parenthesis is required, it must be included.
+    This attention to detail is important in programming and missing a single character can result in an error. Common mistakes made by novice programmers include using a comma instead of a dot, writing `printin` instead of `println`, forgetting apostrophes, or leaving out semicolons.
+    Each of these can cause an error and halt program execution. Learning programming involves making mistakes, and every error message presents an opportunity to learn. Stay vigilant for red error signs and take the time to understand them.   
+       
 </text-box>
 
 <programming-exercise name="Multiple Lines">
@@ -119,7 +122,7 @@ So I will now say Goodbye!
 
 <text-box variant=hint name="Using a shortcut for printing">
 
-Writing the command `System.out.println("...")` can be taxing. Try to write **sout** in IntelliJ on a blank line (within main) and press tab. Note how this will autocomplete to `System.out.println("...")`. This shortcut may save you a lot of time in the future.
+Writing the command `System.out.println("...")` can be taxing. Try to write **sout** in IntelliJ on a blank line (within main) and press tab. Note how this will autocomplete to `System.out.println("...")`. This trick can be a time-saver in the future.
 
 ![](../img/soutVideo.gif)
 
@@ -128,7 +131,7 @@ Writing the command `System.out.println("...")` can be taxing. Try to write **so
 ## Code style and Code Comments
 
 ### Semicolon Separates Commands
-Commands are separated with a semicolon `;`. We could, if we wanted to, write almost everything on a single line. However, that would be difficult to understand.
+Commands are separated with a semicolon `;`. We could, if we wanted to, write almost everything on a single line. However, it's not recommended as it makes the code difficult to understand.
 
 ```java
 System.out.println("Hello "); System.out.println("world"); System.out.println("!");
@@ -142,10 +145,10 @@ world
 
 </sample-output>
 
-Although the previous example works, it's important to be considerate of other programmers (and your future self!) and to use line breaks. That way, anyone reading the program knows that each line does only a single concrete thing.
+Although the previous example works, it's important to consider readability for other programmers (and your future self!). Using line breaks makes the code easier to read as each line is focused on a single task. This makes it clear what each line is doing.
 
 ### Comments
-Source code can be commented to clarify it or to add notes. There are two ways to do this.
+Source code can be commented for clarity or to add notes. There are two types of comments:
 
 - Single-line comments are marked with two slashes `//`. Everything following them on the same line is interpreted as a comment.
 
@@ -171,4 +174,4 @@ public class Comments {
 }
 ```
 
-The last line of the example shows a particularly handy use-case for comments. Code that has been written does not need to be deleted to try out something else. However, do make sure that your code stays organized and prevent having old code in comments in the final version of your program.
+The example's last line highlights a useful case for comments. Code can be commented out instead of being deleted when testing something new. However, it's important to keep the code organized and avoid having old code in comments in the final version of the program.
