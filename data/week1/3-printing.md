@@ -38,7 +38,7 @@ Goodbye!
 
 </sample-output>
 
-The text within the brackets of a function (in this case `System.out.println`) is referred to as an `argument` and can be any text. Our first example used `"Hello World!"` as an argument, while the second used `"Goodbye!"`. But we can use any text, as long as long as it is enclosed in quotation marks `""`.
+The text within the brackets of a function (in this case `System.out.println`) is referred to as an `argument`. Our first example used `"Hello World!"` as an argument, while the second used `"Goodbye!"`. But we can use any text, as long as long as it is enclosed in quotation marks `""`.
 
 <programming-exercise name="Goodbye">
 
