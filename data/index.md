@@ -10,11 +10,13 @@ Welcome to the course page of the Introduction to Programming course! This cours
 
 This course page will act as the main reference for the course and contains practice assignments to make you familiar with the topics that are studied. You are able to test yourself on these assignments through the `IntelliJ EduTools` plugin. Completing these practice assignments will help you to become familiar with the language and train you on how to tackle problems by means of computer programs.
 
-## Interactive Course Overview
+## Course Menu
 
 <div style="position: relative; overflow: hidden; margin-top: 1.5rem; width: 100%; padding-top: 58%;">
-<iframe style="display: block; margin: 0 auto; border: 1px solid grey; position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://onedrive.live.com/embed?cid=AE1EEBA29E76144B&resid=AE1EEBA29E76144B%21171&authkey=AChbD0JwQi81a2c&em=2" allow="encrypted-media"></iframe>
+<iframe style="display: block; margin: 0 auto; border: 1px solid grey; position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://onedrive.live.com/embed?cid=AE1EEBA29E76144B&resid=AE1EEBA29E76144B%21256&authkey=AAcZtJ3L21S8ZsU&em=2
+" allow="encrypted-media"></iframe>
 </div>
+
 
 ## Software
 The software that we recommend you to use for this course for programming is called `IntelliJ IDEA`. This is a so-called Integrated Development Environment (IDE) for writing Java code. IntelliJ is widely used throughout academia and industry and thus provideS you a good basis for any future programming that you do. Instructions on how to set-up IntelliJ on your own PC are given [on this page](./installation). On university PC's, it will already be installed for use. Note that you are also allowed to use other programs to write Java code (like Eclipse), but we strongly advice you to install IntelliJ, which we will use for all video's and which you can use to check your code for the practice assignments.
