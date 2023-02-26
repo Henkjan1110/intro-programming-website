@@ -27,16 +27,17 @@ Next, download the code samples for this week from Canvas and open these in Inte
 
 Note: an older version of IntelliJ is used in this video. If you are using the most recent version of IntelliJ, you can skip the steps from 0:15 to 0:32 in the video and follow these steps instead:
 - Open the IntelliJ IDEA
-- Click on `My Courses` in the menu on the left
-- Click on `Start New Course`
-- Click again on `My Courses` in the menu on the left
-- Click on `Open course from disk`
-- Select the zip-file that you downloaded
-- Click on `Start`
+- In the Welcome Screen, click on `Learn` in the menu on the left
+- Click on `Enable Access` under the `Learn to Program` section
+- Once it is finished, click on `Get Started`
+- A new window pops up, in menu on the left go to `My Courses`
+- At the bottom of the window, click on `Open course from disk`
+- Select the zip-file that you downloaded and press `Ok`
+- Click on `Start` in the new window that pops up
 - IntelliJ may ask whether you trust the project. Click on `Trust Project`
 - Select the `Hello World` task under the lesson `First Programming Code`
 
-If you run into issues here, you can ask for help during the first week tutorial, on the discussion board or by sending an email to feb21011@ese.eur.nl.
+If you run into issues here, you can ask for help during the first week tutorial, on the discussion board.
 
 ## Writing your first program
 You are now ready to write your first program. In Java, programs require some mandatory code (known as boilerplate code) to indicate the program's name to the computer. Our program name is `HelloWorld` and has to correspond to the name of the file that contains the source code (i.e., `HelloWorld.java`).
