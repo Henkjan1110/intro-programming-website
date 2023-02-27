@@ -6,25 +6,25 @@ hidden: false
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
 
-  - You Learn to read inputs that are of different types
+  - You learn to read inputs that are of different types
 
   - You learn how to print variables in a formatted way
 
 </text-box>
 
-In the previous week, we learned that we can read `String` and `int` input from the user by making use of the following methods of the `Scanner` class (after declaring a `Scanner` with the variable name `scanner`):
+Last week, we learned how to read user input for `String` and `int` data types using the `Scanner` class. To do so, we can utilize the following methods after declaring a `Scanner` with the variable name `scanner`:
 ``` java
   scanner.nextLine();
   scanner.nextInt();
 ```
 
-The `Scanner` class also offers convenient methods for the other variable types that we have looked at last week: `boolean` and `double`. For these, you can use the methods:
+In addition to `String` and `int`, the `Scanner` class provides handy methods for the other data types we covered last week, namely `boolean` and `double`. To read input for these data types, we can use the following methods:
 ``` java
   scanner.nextBoolean();
   scanner.nextDouble();
 ```
 
-As an example, we can thus read all variables types that we have learned in the following way:
+As an example, we can thus use the `Scanner` class to read all variables types that we have learned so far in the following way:
 ``` java
 import java.util.Scanner;
 
@@ -56,10 +56,11 @@ public class Inputs {
 }
 ```
 
-Note that it is important that the user actually enters an input of the correct type. If this is not the case, the `Scanner` tool will not be able to convert the input to the correct variable type and you will see that an error occurs when the program is run. We will deal with methods to handle such situations later in this course.
+It's important to note that the user must enter input of the correct type. If the input is not of the correct type, the `Scanner` tool will not be able to convert it to the correct variable type and an error will occur when the program is run. We will cover methods to handle such situations later in this course.
 
 <programming-exercise name="Different Inputs">
-In this assignment, you should write a program that reads three values: one corresponding to a boolean and two to a `double`. You should then print the value of the `boolean` and the sum of the two `double` inputs. The output of your program should look like:
+
+In this assignment, you should write a program that reads three values: one corresponding to a `boolean` and two to a `double`. You should then print the value of the `boolean` and the sum of the two `double` inputs. The output of your program should look like this:
 
 <sample-output>
 
@@ -77,14 +78,14 @@ The sum of the double inputs: 19.35
 </programming-exercise>
 
 ## Converting Strings
-Another option to deal with transferring a `String` value, as is obtained, for example, from input give by a user, to a different type is by means of the dedicated parsing methods. In  particular, let us assume we have a given `String` with the variable name `message`. We can then use the following methods to convert this `String` to the variable types we have seen so far:
+When dealing with transferring a `String` value, obtained from user input, to a different type, there is another option available: using dedicated parsing methods. In this case, let us assume that we have a given `String` with the variable name `message`. We can then use the following methods to convert this `String` to the variable types we have seen so far:
 ``` Java
 boolean booleanValue = Boolean.parseBoolean(message);
 int intValue = Integer.parseInt(message);
 double doubleValue = Double.parseDouble(message);
 ```
 
-As an example, converting the output of the `nextLine()` method of the `Scanner` class to an `int` value would then look as follows:
+For example, converting the output of the `nextLine()` method of the `Scanner` class to an `int` value would then look as follows:
 ``` Java
 import java.util.Scanner;
 
@@ -113,24 +114,27 @@ public class DoublePrinting {
 }
 ```
 
-However, sometimes we like to have a bit more control over what is exactly printed. For example, we might want to print only a few numbers behind the decimal point in the above example. This can be achieved by using the `System.out.printf()` command. For example, to print the `double` variable in the above example to a precision of two digits behind the decimal point we would use the command:
+However, sometimes we want more control over what is exactly printed. For example, we might want to print only a few numbers behind the decimal point in the above example. This can be achieved by using the `System.out.printf()` command. To print the `double` variable in the above example to a precision of two digits behind the decimal point, we use the command:
 ``` Java
 System.out.printf("The value is %.2f", pi);
 ```
-Note that we now give two arguments to the method `System.out.printf`, which are separated by a comma. First of all, we give a `String` that represents what we want to print. Here we use the flag `%.2f` on the spot where we want the value of `pi` to be. In particular, this flag indicates that the value we want to print is a `double`, indicated by the `f` and that we want to have two digits behind the comma, indicated by the `.2`. As the second argument we then give the value that should be on the spot of this flag, in our case `pi`.
+Note that when using the method `System.out.printf`, we need to give it two arguments separated by a comma.
+The first argument should be a `String` that represents what we want to print. In this `String`, we can use special flags to indicate where we want to insert the values of variables we're printing.
+For example, the flag `%.2f` indicates that we want to print a double value with two decimal places. The `f` indicates that it's a floating point number, while the `.2` specifies the number of decimal places. To print the value of `pi` in this format, we place the flag `%.2f` in the `String` where we want to print `pi`.
+The second argument we provide is the value that should replace the flag. In our example, we provide the value of `pi` as the second argument.
 
-We can also use other flags to represent other variable types. In particular:
-- `%.xs` represents a `String`, where the number `x` indicates the number of characters we want to print of the `String`. For example, `%.10s` prints the first 10 characters (i.e., letters and spaces) of the `String`.
-- `%.xf` represents a `double` value as above, where the number `x` indicates the number of decimals we want to print behind the comma.
-- `%.xe` can be used to print a `double` in scientific notation. In scientific notation we print the value in the form `y*10^z` where `y` is a fractional number below 10 and `z` is a round number. The number `x` indicates in this case the number of digits that we display behind the comma of the `double` y.
+We can alo use different flags to represent different variable types. Here are some examples:
 
-Note that in all these cases the variable itself is not actually changed when printing. Instead, the `printf` method only determines how the variable is displayed in the printed output. 
+- `%.xs` represents a `String`, where the number `x` specifies the maximum number of characters we want to print.
+- `%.xf` represents a `double` value with a specified number of decimal places.
+- `%.xe` represents a `double` value in scientific notation, where the number `x` specifies the number of decimal places.
 
-Furthermore, notice that unlike `println`, `printf` does not start a new line. So, if you do want to start a new line, you will have to do this manually.
+Note that when we use `printf`, we're only changing the way the variable is displayed in the printed output. The actual variable remains unchanged.
+Also, unlike `println`, `printf` does not start a new line after printing. If we want to start a new line, we would have to do this manually.
 
 <programming-exercise name="Formatted Printing">
 
-The sample code for this assignment initializes a `double` variable `longNumber`. Your program should print this variable in two ways:
+For this assignment, the sample code initializes a `double` variable `longNumber`. Your program should print this variable in two ways:
 - With three digits behind the decimal point
 - In scientific notation with two digits behind the decimal point
 
