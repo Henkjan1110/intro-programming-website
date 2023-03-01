@@ -168,7 +168,7 @@ You are an adult
 </programming-exercise>
 
 ## More Conditionals: else if
-In cases where there are multiple conditions to be evaluated, we use the `else if` command. Similar to the `else` command, the `else if` command allows us to specify an additional condition to check. It is placed after the initial `if` condition and can be used multiple times.
+In cases where there are multiple conditions to be evaluated, we use the `else if` command. This command is placed after the initial `if` condition and can be used multiple times.
 
 ```java
 int number = 3;
@@ -262,8 +262,8 @@ if (isLessThan) {
 ```
 The program will output: 1 is less than 3!
 
-<!-- ### Modulo operator
-The modulo operator is a slightly less-used operator, which is, however, very handy when we want to check the divisibility of a number, for example. The symbol for the modulo operator is `%`. The output of a modulo operator is the remainder after division of the first number by the second number.
+### Modulo operator
+An operator which is very useful when we want to check the divisibility of a number is the modulo operator. The symbol for this modulo operator is `%` and the output of a modulo operator is the remainder after division of the first number by the second number.
 
 ```java
 int remainder = 7 % 2;
@@ -274,7 +274,7 @@ System.out.println(8 % 4); // prints 0
 System.out.println(1 % 2); // prints 1
 ```
 
-If we want to know whether the number given by the user is divisible by four hundred, we check if the remainder is zero after taking the modulo of the number and four hundred. Since the modulo is an operation just like other calculations, it can be a part of an expression in a conditional statement.
+For instance, if we would want to know whether a number given by the user is divisible by four hundred, we could check if the remainder is zero after taking the modulo of the number and four hundred. Since the modulo is an operation just like other calculations, it can be a part of an expression in a conditional statement.
 
 ```java
 Scanner reader = new Scanner(System.in);
@@ -286,7 +286,7 @@ if (number % 400 == 0) {
 } else {
     System.out.println("The number " + number + " is not divisible by four hundred.");
 }
-``` -->
+```
 
 ## Conditional Statements and Comparing Strings
 Although integers, floating-point numbers, and boolean values can be compared using two equals signs (`variable1 == variable2`), the same approach cannot be used for comparing the equality of strings.
