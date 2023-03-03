@@ -6,19 +6,19 @@ hidden: false
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
 
-- Become familiar with the idea of a conditional statement and know how to create a program containing optional operations through the use of conditional statements.
+- Become familiar with the idea of a conditional statement and learn how to create a program containing optional operations through the use of conditional statements.
 
 - Become familiar with comparison and logical operators commonly used in conditional statements.
 
-- Know how to compare both numbers and strings, remembering the equals-command for strings.
+- Learn how to compare both numbers and strings by remembering the equals-command for strings.
 
 - Become familiar with the order of execution for a conditional statement, and know that the parsing of a conditional statement stops at the first condition whose statement evaluates to true.
 
 </text-box>
 
-So far, our programs have executed from top to bottom without major surprises or conditional behavior. However, we usually want to add conditional logic to our programs. By this we mean functionality that's in one way or another dependent on the state of the program's variables.
+So far, our programs have followed a straightforward execution from top to bottom, without incorporating any conditions or conditional behavior. However, in most cases, we need to include conditional logic in our programs. This logic is dependent on the state of the program's variables.
 
-To branch the execution of a program based on user input, for example, we need to use something known as a **conditional statement**. The simplest conditional statement looks something like this.
+To introduce conditional branching in a program based on user input, we need to use what is known as a **conditional statement**. The most basic form of a conditional statement is as follows.
 
 ```java
 System.out.println("Hello, world!");
@@ -34,11 +34,13 @@ This code is unavoidable!
 
 </sample-output>
 
-A conditional statement begins with the keyword `if` followed by parentheses. An expression is placed inside the parentheses, which is evaluated when the conditional statement is reached. The result of the evaluation is a boolean value. No evaluation occurred above. Instead, a boolean value was explicitly used in the conditional statement.
+Conditional statements are used to make decisions based on the state of the program's variables. In Java, the most basic conditional statement is the `if` statement. It begins with the keyword `if`, followed by parentheses that contain an expression to be evaluated.
 
-The parentheses are followed by a block, which is defined inside opening `{` and closing `}` curly brackets. The source code inside the block is executed if the expression inside the parentheses evaluates to _true_. On the other hand, if the expression evaluates to false, the execution moves on to the statement after the closing curly bracket of the current conditional statement.
+The expression inside the parentheses is evaluated when the conditional statement is reached. The result of the evaluation is a boolean value. If the expression evaluates to `true`, the source code inside the block that follows the conditional statement is executed. On the other hand, if the expression evaluates to `false`, the execution skips the source code inside the block and moves on to the statement after the closing curly bracket of the current conditional statement.
 
-Be aware of the fact that an `if` -statement is not followed by a semicolon since the statement doesn't end after the conditional. Let's now look at an example where we compare numbers in the conditional statement.
+It's important to note that an `if` statement is not followed by a semicolon because the statement doesn't end after the conditional. Instead, the curly braces `{}` are used to define the block of code to be executed when the condition is `true`.
+
+Here's an example that compares two numbers in a conditional statement:
 
 ```java
 int number = 11;
@@ -46,7 +48,7 @@ if (number < 10) {
     System.out.println("The number was less than 10");
 }
 ```
-Note that the sentence "The number was less than 10" will not be printed, since the condition `number < 10 ` does not hold for the variable `number` with value `11`.
+In this example, the variable `number` is assigned a value of `11`. The condition inside the parentheses, `number < 10`, evaluates to `false`. Therefore, the source code inside the block that follows the conditional statement is not executed and the sentence "The number was less than 10" will not be printed.
 
 <programming-exercise name="Speeding Ticket">
 
@@ -70,11 +72,11 @@ Speeding ticket!
 </programming-exercise>
 
 ## Code Indentation and Block Statements
-A code block refers to a section enclosed by a pair of curly brackets. The source file containing the program includes the string `public class`, which is followed by the name of the program and the opening curly bracket of the block. The block ends in a closing curly bracket. The recurring snippet `public static void main(String[] args)` in the programs begins a block, and the source code within it is executed when the program is run. This snippet is, in fact, the starting point of all programs. Blocks define a program's structure and its bounds. A curly bracket must always have a matching pair: any code that's missing a closing (or opening) curly bracket is erroneous.
+A code block is a section of code enclosed by a pair of curly brackets. In Java, the source file containing a program must include the string `public class`, followed by the name of the program and the opening curly bracket of the block. The block ends with a closing curly bracket. The recurring snippet `public static void main(String[] args)` begins a block, and the source code within it is executed when the program is run. This snippet is the starting point of all Java programs. Blocks define a program's structure and its boundaries. It's important to note that a curly bracket must always have a matching pair: any code missing a closing (or opening) curly bracket is invalid.
 
-A conditional statement also marks the start of a new code block. In addition to the defining program structure and functionality, block statements also have an effect on the readability of a program. Code living inside a block is indented. For example, any source code inside the block of a conditional statement is indented four spaces deeper than the `if` command that started the conditional statement. Four spaces can also be added by pressing the `tab` key. When the block ends, i.e., when we encounter a `}` character, the indentation also ends. The `}` character is at the same level of indentation as the `if`-command that started the conditional statement.
+A conditional statement also marks the start of a new code block. In addition to defining program structure and functionality, block statements have an effect on the readability of a program. Code inside a block is typically indented for clarity. For example, any source code inside the block of a conditional statement is indented four spaces deeper than the `if` command that started the conditional statement. Four spaces can also be added by pressing the `tab` key. When the block ends with a `}` character, the indentation also ends. The `}` character should be at the same level of indentation as the `if` command that started the conditional statement.
 
-The example below is correctly indented.
+The example below shows correct indentation:
 
 ```java
 if (number > 10) {
@@ -82,10 +84,10 @@ if (number > 10) {
 }
 ```
 
-Code in Java is indented either by four spaces or a single tab for each block. Use either spaces or tabs for indentation, not both. For automatic indendation in IntelliJ, you can use the shortcut `Ctrl + alt + L`. From now on your program code needs to be indented correctly in the exercises as well. If the indentation is incorrect, style points may be deducted for the graded assignments.
+In Java, code should be indented consistently with either four spaces or a single tab for each block. It's important to use only one of these methods for indentation, not both. To automatically indent code in IntelliJ, use the shortcut `Ctrl + alt + L`. From now on, it's important to indent code correctly in exercises and graded assignments, as incorrect indentation may result in lost style points.
 
 ## Relational Operators
-As you might have noticed, in the argument of conditional statements, some comparison operators, also referred to as `relational operators` are used to compare numbers. In Java, we use the following relational operators:
+As you may have noticed, conditional statements often use comparison operators, also known as `relational operators`, to compare numbers. Java provides a set of standard relational operators for this purpose:
 
 - `>` greater than
 - `>=` greater than or equal to
@@ -129,7 +131,7 @@ Orwell
 </programming-exercise>
 
 ## Else
-If the expression inside the parentheses of the conditional statement evaluates to false, then the execution of the code moves to the statement following the closing curly bracket of the current conditional statement. This is not always desired, and usually we want to create an alternative option for when the conditional expression evaluates to false. This can be done with the help of the `else` command, which is used together with the `if` command.
+If the expression inside the parentheses of the conditional statement evaluates to false, then the execution of the code moves to the statement following the closing curly bracket of the current conditional statement. This is not always desirable, and usually, we want to provide an alternative option when the conditional expression evaluates to false. This can be achieved using the `else` command, which is used together with the `if` command.
 
 ```java
 int number = 4;
@@ -141,8 +143,7 @@ if (number > 5) {
 }
 ```
 
-If an `else` branch has been specified for a conditional statement, the block defined by the else branch is run in the case that the condition of the conditional statement is false. The `else`-command is placed on the same line as the closing bracket of the block defined by the `if`-command. In the following example, the argument for the if-statement is false, so that the program
-will return the code block under the `else` command. The output will be: "Your number is five or less."
+If an `else` branch has been specified for a conditional statement, the block defined by the `else` branch is executed when the condition of the conditional statement is false. The `else` command is placed on the same line as the closing bracket of the block defined by the `if` command. In the example stated above, the argument for the if-statement is false, so the program will execute the block under the `else` command. The output will be: "Your number is five or less."
 
 <programming-exercise name="Adulthood">
 
@@ -167,7 +168,7 @@ You are an adult
 </programming-exercise>
 
 ## More Conditionals: else if
-In the case of multiple conditionals, we use the `else if`-command. The command `else if` is like `else`, but with an additional condition. `else if` follows the `if`-condition, and there may be multiple of them.
+In cases where there are multiple conditions to be evaluated, we use the `else if` command. This command is placed after the initial `if` condition and can be used multiple times.
 
 ```java
 int number = 3;
@@ -231,7 +232,7 @@ In the following video, we show what it looks like when we write a program using
 
 
 ## Conditional Statement Expression and the Boolean Variable
-The value that goes between the parentheses of the conditional statement should be of type boolean after the evaluation. `boolean` type variables are either _true_ or _false_. A conditional statement can also be done as follows:
+The expression inside the parentheses of a conditional statement must evaluate to a boolean value, which can either be `true` or `false`. A conditional statement can also be constructed with a boolean variable, like so:
 
 ```java
 boolean isItTrue = true;
@@ -240,7 +241,7 @@ if (isItTrue) {
 }
 ```
 
-Comparison operators can also be used outside of conditionals. In those cases, the boolean value resulting from the comparison is stored in a boolean variable for later use.
+Apart from being used in conditionals, comparison operators can also be used to produce boolean values that can be stored in boolean variables for later use. For example:
 
 ```java
 int first = 1;
@@ -248,7 +249,7 @@ int second = 3;
 boolean isGreater = first > second;
 ```
 
-In the example above, the boolean variable `isGreater` now contains the boolean value _false_. We can extend the previous example by adding a conditional statement to it.
+In the example above, the boolean variable `isGreater` now stores the boolean value `false`. We can further extend the previous example by adding a conditional statement:
 
 ```java
 int first = 1;
@@ -259,10 +260,10 @@ if (isLessThan) {
     System.out.println("1 is less than 3!");
 }
 ```
-The program finally prints: 1 is less than 3!
+The program will output: 1 is less than 3!
 
-<!-- ### Modulo operator
-The modulo operator is a slightly less-used operator, which is, however, very handy when we want to check the divisibility of a number, for example. The symbol for the modulo operator is `%`. The output of a modulo operator is the remainder after division of the first number by the second number.
+### Modulo operator
+An operator which is very useful when we want to check the divisibility of a number is the modulo operator. The symbol for this modulo operator is `%` and the output of a modulo operator is the remainder after division of the first number by the second number.
 
 ```java
 int remainder = 7 % 2;
@@ -273,7 +274,7 @@ System.out.println(8 % 4); // prints 0
 System.out.println(1 % 2); // prints 1
 ```
 
-If we want to know whether the number given by the user is divisible by four hundred, we check if the remainder is zero after taking the modulo of the number and four hundred. Since the modulo is an operation just like other calculations, it can be a part of an expression in a conditional statement.
+For instance, if we would want to know whether a number given by the user is divisible by four hundred, we could check if the remainder is zero after taking the modulo of the number and four hundred. Since the modulo is an operation just like other calculations, it can be a part of an expression in a conditional statement.
 
 ```java
 Scanner reader = new Scanner(System.in);
@@ -285,10 +286,10 @@ if (number % 400 == 0) {
 } else {
     System.out.println("The number " + number + " is not divisible by four hundred.");
 }
-``` -->
+```
 
 ## Conditional Statements and Comparing Strings
-Even though we can compare integers, floating point numbers, and boolean values using two equals signs (`variable1 == variable2`), we cannot compare the equality of strings using two equals signs.
+Although integers, floating-point numbers, and boolean values can be compared using two equals signs (`variable1 == variable2`), the same approach cannot be used for comparing the equality of strings.
 
 You can try this with the following program:
 
@@ -327,9 +328,9 @@ The strings were different!
 
 </sample-output>
 
-This has to do with the internal workings of strings as well as how variable comparison is implemented in Java. In practice, the comparison is affected by how much information a variable can hold -- strings can hold a limitless amount of characters, whereas integers, floating-point numbers, and boolean values always contain a single number or value only. Variables that always contain only one number or value can be compared using an equals sign, whereas this doesn't work for variables containing more information. We will return to this topic later in this course.
+This is due to how Java implements variable comparison and the internal workings of strings. Since strings can contain a limitless number of characters, and variables that contain only one number or value can be compared using an equals sign, using such method for strings doesn't work. We will explore this topic further in this course.
 
-When comparing strings we use the `equals`-command, which is related to string variables. The `equals` command is written after a string by attaching it to the string to be compared with a dot. The command is given a parameter, which is the string that the variable will be compared against. If the string variable is being directly compared with a string, then the string can be placed inside the parentheses of the equals-command within quotation marks. Otherwise, the name of the string variable that holds the string to be compared is placed inside the parentheses. The command works in the following way:
+When comparing strings, it is important to use the `equals` command, which is specifically designed for string variables. This command is written after a string by appending it to the end of the string to be compared using a dot. It takes a parameter, which is the string to be compared against the variable. If the variable is being compared with a string directly, the string can be placed inside the parentheses of the `equals` command, enclosed in quotation marks. On the other hand, if a string variable holds the string to be compared, the name of the variable should be placed inside the parentheses. The `equals` command works as follows:
 
 ```java
 Scanner reader = new Scanner(System.in);
@@ -344,7 +345,7 @@ if (input.equals("a string")) {
 }
 ```
 
-In the example below the user is prompted for two strings. We first check to see if the provided strings are the same, after which we'll check if the value of either one of the two strings is "two strings".
+In the example below the user is prompted for two strings. We first check to see if the provided strings are the same, after which we check if the value of either one of the two strings is "two strings".
 
 ```java
 Scanner reader = new Scanner(System.in);
@@ -394,15 +395,13 @@ Different
 </programming-exercise>
 
 ## Logical Operators
-The expression of a conditional statement may consist of multiple parts, in which the logical operators **and** `&&`, **or** `||`, and **not** `!` are used.
+A conditional statement can contain an expression consisting of multiple parts, which can be combined using logical operators such as the **and** operator `&&`, **or** operator `||`, and **not** operator `!`.
 
-- An expression consisting of two expressions combined using the and-operator is true, if and only if both of the combined expressions evaluate to true.
+- An expression that is made up of two expressions combined using the and-operator is only true if both of the expressions being combined evaluate to true.
+- An expression that is made up of two expressions combined using the or-operator is true if either one, or both, of the expressions being combined evaluate to true.
+- It is important to note that logical operators do not change the boolean value from true to false or false to true. They only combine and evaluate expressions.
 
-- An expression consisting of two expressions combined using the or-operator is true if either one, or both, of the combined expressions evaluate to true.
-
-- Logical operators are not used for changing the boolean value from true to false, or false to true.
-
-In the next example we combine two individual conditions using `&&` (the and-operator). The code is used to check if the number in the variable is greater than or equal to 5 and less than or equal to 10. In other words, we whether 7 is within the range of 5-10, which should give the output "It is!":
+In the next example we combine two individual conditions using the and-operator (`&&`). The code is used to check if `number` is greater than or equal to 5 and less than or equal to 10. In other words, we check whether 7 is within the range of 5-10, which should give the output "It is!":
 
 ```java
 System.out.println("Is the number within the range 5-10? ");
@@ -415,7 +414,7 @@ if (number >= 5 && number <= 10) {
 }
 ```
 
-In the next one we provide two conditions using `||` (the or-operator): is the number less than zero or greater than 100? The condition is fulfilled if the number fulfills either one of the two conditions, which is true for 145:
+In the next example we provide two conditions using the or-operator (`||`): is the number less than zero or greater than 100? The condition is fulfilled if the number fulfills either one of the two conditions, which is true for the number 145 for instance:
 
 ```java
 System.out.println("Is the number less than 0 or greater than 100");
@@ -428,7 +427,7 @@ if (number < 0 || number > 100) {
 }
 ```
 
-In the next example we flip the result of the expression `number > 4` using `!`, i.e., the not-operator. The not-operator is written in such a way that the expression to be flipped is wrapped in parentheses, and the not-operator is placed before the parentheses.
+In the next example we flip the result of the expression `number > 4` using the not-operator (`!`). The not-operator is written in such a way that the expression to be flipped is wrapped in parentheses, whilst the not-operator is placed before these parentheses.
 
 ```java
 int number = 7;
@@ -442,7 +441,7 @@ if (!(number > 4)) {
 
 <programming-exercise name='Checking the age'>
 
-Write a program that prompts the user to input their age and checks whether it is possible (at least 0 and at most 120). Only use a single `if`-command in your program.
+Write a program that prompts the user to input their age and checks whether this age is feasible (at least 0 and at most 120). Only use a single `if`-command in your program.
 
 <sample-output>
 
@@ -480,7 +479,7 @@ Impossible!
 
 ## Execution order
 #### Order of Execution for Comparisons
-The comparisons are executed top down. When execution reaches a conditional statement whose condition is true, its block is executed and the comparison stops.
+Comparisons are always executed top down. Whenever execution reaches a conditional statement whose condition is `true`, its block is executed and the comparison stops.
 
 ```java
 int number = 5;
@@ -496,7 +495,7 @@ if (number == 0) {
 }
 ```
 
-The example above prints the string "The number is greater than zero." even if the condition `number > 2` is true. The comparison stops at the first condition that evaluates
+The example above prints the string "The number is greater than zero." even if the condition `number > 2` is true. The comparison namely stops at the first condition that evaluates
 to true.
 
 #### Execution Order of Conditional Statements
@@ -504,7 +503,7 @@ Let's familiarize ourselves with the execution order of conditional statements t
 
 _'Write a program that prompts the user for a number between one and one hundred, and prints that number. If the number is divisible by three, then print "Fizz" instead of the number. If the number is divisible by five, then print "Buzz" instead of the number. If the number is divisible by both three and five, then print "FizzBuzz" instead of the number.'_
 
-The programmer begins solving the exercise by reading the exercise description and by writing code according to the description. The conditions for execution are presented in a given order by the description, and the initial structure for the program is formed based on that order. The structure is formed based on the following steps:
+The programmer begins to solve the exercise by reading the exercise description and by writing code according to the description. The conditions for execution are presented in a given order by the description, and the initial structure for the program is formed based on that order. The structure is formed based on the following steps:
 
 - Write a program that prompts the user for a number and prints that number.
 
@@ -514,7 +513,7 @@ The programmer begins solving the exercise by reading the exercise description a
 
 - If the number is divisible by both three and five, then print "FizzBuzz" instead of the number.
 
-If-type conditions are easy to implement using `if - else if - else` -conditional statements. The code below was written based on the steps above, but it does not work correctly, which we can see from the example.
+If-type conditions are easy to implement using `if` - `else if` - `else` -conditional statements. The code below was written based on the steps above, but it does not work correctly, which we can see from the example.
 
 ```java
 Scanner reader = new Scanner(System.in);
@@ -532,9 +531,9 @@ if (number % 3 == 0) {
 }
 ```
 
-The problem with the previous approach is that **the parsing of conditional statements stops at the first condition that is true**. E.g., with the value 15 the string "Fizz" is printed, since the number is divisible by three (15 % 3 == 0).
+The problem with the previous approach is that **the parsing of conditional statements stops at the first condition that is true**. E.g., with the value 15 the string "Fizz" is printed, since the number is divisible by three (15 % 3 == 0), whereas we would actually want to see "FizzBuzz".
 
-One approach for developing this train of thought would be to first find the **most demanding condition**, and implement it. After that, we would implement the other conditions. In the example above, the condition "if the number is divisible by both three **and** five" requires two things to happen. Now the train of thought would be:
+One approach for improving and developing the correct train of thought would be to first find the **most demanding condition**, and implement it. After that, we would implement the other conditions. In the example above, the condition "if the number is divisible by both three **and** five" requires two things to happen. Now the train of thought would be:
 
 1. Write a program that reads input from the user.
 
