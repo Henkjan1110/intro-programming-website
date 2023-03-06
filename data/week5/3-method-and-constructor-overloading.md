@@ -12,7 +12,7 @@ hidden: false
 
 </text-box>
 
-Let's once more return to our Person class. It currently looks like this:
+Let's once more return to our Person class. Currently, it looks like this:
 
 ```java
 public class Person {
@@ -77,7 +77,7 @@ public class Person {
 }
 ```
 
-All person objects are 0 years old when created. This is because the constructor sets the value of the instance variable `age` to 0:
+All `person` objects are 0 years old when created. This is because the constructor sets the value of the instance variable `age` to 0:
 
 ```java
 public Person(String name) {
@@ -90,9 +90,9 @@ public Person(String name) {
 
 
 ##  Constructor Overloading
-We would also like to be able to create persons so that the constructor is provided both the age as well as the name as parameters. This is possible since a class may have multiple constructors.
+We would like to enhance our Person class to enable creating persons with both age and name provided as parameters to the constructor. This is possible by defining an alternative constructor in the class.
 
-Let's make an alternative constructor. The old constructor can remain in place.
+Let's implement the new constructor while keeping the old constructor unchanged.
 
 ```java
 public Person(String name) {
@@ -129,21 +129,20 @@ Ada is 0 years old.
 
 </sample-output>
 
-The technique of having two (or more) constructors in a class is known as *constructor overloading*. A class can have multiple constructors that differ in the number and/or type of their parameters. It's not, however, possible to have two constructors with the exact same parameters.
+The technique of having multiple constructors in a class with different parameters is known as constructor overloading. A class can have multiple constructors that differ in the number and/or type of their parameters. However, it's not possible to have two constructors with the exact same parameters.
 
-We cannot, for example, add a `public Person(String name, int weight)` constructor since it would be impossible for Java to differentiate between this and the one that has two parameters where int parameter is used for age.
-
+For example, adding a `public Person(String name, int weight)` constructor would not be possible because Java would not be able to differentiate it from the existing constructor that has two parameters where the int parameter is used for age.
 
 
 ## Calling Your Constructor
 
-Hold on a moment. We'd previously concluded that "copy-paste" code is not a good idea. When you look at the overloaded constructors above, however, they have a lot in common. We're not happy with this.
+Let's pause for a moment. We previously determined that copying and pasting code is not a good practice. However, if we look at the overloaded constructors above, we can see that they share a lot of similarities, which is not ideal.
 
-The first constructor - the one that receives a name as a parameter - is in fact a special case of the second constructor - the one that's given both name and age. What if the first constructor could call the second constructor?
+The first constructor, which accepts a name parameter, is actually a specific case of the second constructor, which takes both name and age parameters. So, what if we made the first constructor call the second constructor instead?
 
-This is possible. A constructor can be called from another constructor using the `this` keyword, which refers to this object in question!
+Thankfully, this is possible. A constructor can invoke another constructor using the `this` keyword, which refers to the current object.
 
-Let's modify the first constructor so that it does not do anything by itself, but instead calls the second constructor and asks it to set the age to 0.
+Let's modify the first constructor so that it does not perform any actions itself, but instead calls the second constructor and sets the age parameter to 0.
 
 ```java
 public Person(String name) {
@@ -159,9 +158,9 @@ public Person(String name, int age) {
 }
 ```
 
-The constructor call `this(name, 0);` might seem a bit weird. A way to think about it is to imagine that the call is automatically replaced with "copy-paste" of the second constructor in such a way that the age parameter is set to 0. NB! If a constructor calls another constructor, the constructor call must be the first command in the constructor.
+The constructor call `this(name, 0);` may seem unusual. To better understand it, imagine that the call is automatically replaced with a "copy-paste" of the second constructor, where the age parameter is set to 0. It's important to note that if a constructor calls another constructor, the constructor call must be the first command in the constructor.
 
-New objects can be created just as before:
+Creating new objects works the same way as before:
 
 ```java
 public static void main(String[] args) {
@@ -259,9 +258,9 @@ Paul is 35 years old.
 
 </sample-output>
 
-A Person now has two methods, both called `growOlder`. The one that gets executed depends on the number of parameters provided.
+`Person` now has two methods, both called `growOlder`. The one that gets executed depends on the number of parameters provided.
 
-We may also modify the program so that the parameterless method is implemented using the method `growOlder(int years)`:
+We may also modify the program such that the parameterless method is implemented using the method `growOlder(int years)`:
 
 
 ```java
@@ -286,14 +285,14 @@ Implement a class called `Counter`. The class contains a number whose value can 
 And the following methods:
 
 - `public int value()` returns the current value of the counter
--  `public void increase()` increases the value by 1
--  `public void decrease()` decreases the value by 1
+- `public void increase()` increases the value by 1
+- `public void decrease()` decreases the value by 1
 
 <h2>Alternative methods</h2>
 
-Implement versions which are given one parameter of the methods `increase` and `decrease`.
+Implement the methods `increase` and `decrease`, which are given one parameter as input.
 
- - `public void increase(int increaseBy)` increases the value of the counter by the value of increaseBy. If the value of increaseBy is negative, the value of the counter does not change.
+-  `public void increase(int increaseBy)` increases the value of the counter by the value of increaseBy. If the value of increaseBy is negative, the value of the counter does not change.
 
 -  `public void decrease(int decreaseBy)` decreases the value of the counter by the value of decreaseBy. If the value of decreaseBy is negative, the  value of the counter does not change.
 
