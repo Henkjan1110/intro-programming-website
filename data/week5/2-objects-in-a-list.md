@@ -7,14 +7,14 @@ hidden: false
 <text-box variant='learningObjectives' name='Learning Objectives'>
 
 - You can add objects to a list
-- You can go through objects in a list
+- You can iterate through objects in a list
 
 </text-box>
 
 
-The type parameter used in creating a list defines the type of the variables that are added to the list. For instance, `List<String>` includes strings, `List<Integer>` integers, and `List<Double>` floating point numbers
+The type parameter used to create a list specifies the data type of the elements that will be stored in the list. For example, `List<String>` is used for storing strings, `List<Integer>` for integers, and `List<Double>` for floating-point numbers.
 
-In the example below we first add strings to a list, after which the strings in the list are printed one by one.
+In the following example, we add strings to a list and then print each string that was added to the list.
 
 ```java
 List<String> names = new ArrayList<>();
@@ -41,6 +41,7 @@ while (index < names.size()) {
     index = index + 1;
 }
 
+System.out.println();
 // 2. for loop with index
 for (int i = 0; i < names.size(); i++) {
     System.out.println(names.get(i));
@@ -80,9 +81,9 @@ Ruth Lichterman
 
 ## Adding object to a list
 
-Strings are objects, so it should come as no surprise that other kinds of objects can also be found in lists. Next, let's examine the cooperation of lists and objects in more detail.
+Strings are objects, so it should come as no surprise that other types of objects can also be stored in lists. In the following section, we will take a closer look at how lists can work with objects.
 
-Let's assume we have access to the class defined below, describing a person.
+Assuming we have access to the following class definition for a `Person`:
 
 ```java
 public class Person {
@@ -131,9 +132,9 @@ public class Person {
 }
 ```
 
-Handling objects in a list is not really different in any way from the previous experience we have with lists. The essential difference is only to define the type for the stored elements when you create the list.
+Working with objects in a list is very similar to working with any other type of element. The main difference is that you need to specify the type of object that the list will store when you create it.
 
-In the example below we first create a list meant for storing Person type object, after which we add persons to it. Finally the person objects are printed one by one.
+The example below demonstrates this by first creating a list that will store objects of type `Person`. Then, several `Person` objects are added to the list, and finally, each `Person` object is printed out one by one.
 
 ```java
 List<Person> persons = new ArrayList<>();
@@ -212,7 +213,7 @@ Implement the class `Items` described here. **NB!** Don't modify the class `Item
 
 Write a program that reads names of items from the user. If the name is empty, the program stops reading. Otherwise, the given name is used to create a new item, which you will then add to the `items` list.
 
-Having read all the names, print all the items by using the `toString` method of the  `Item` class. The implementation of the `Item` class keeps track of the time of creation, in addition to the name of the item.
+Having read all the names, print all the items by using the `toString` method of the `Item` class. The implementation of the `Item` class keeps track of the time of creation, in addition to the name of the item.
 
 An example of the working program is given below:
 
