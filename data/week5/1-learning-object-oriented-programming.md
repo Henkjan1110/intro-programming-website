@@ -180,7 +180,7 @@ public class Clock {
 }
 ```
 
-This way the program functions have become increasingly clearer. When you compare our program below to the original one (made up of integers), you'll find that the program's readability is superior.
+This way the functions in the program have become increasingly clearer. When you compare our program below to the original one, which used only integers as variables, you'll find that the program's readability is superior.
 
 ```java
 Clock clock = new Clock();
@@ -191,7 +191,7 @@ while (true) {
 }
 ```
 
-The clock we implemented earlier is a prime example of an object that relies on "simpler" objects, namely its hands, for its functionality. This is the fundamental principle of object-oriented programming: building programs from small, distinct objects that collaborate with one another.
+The clock we implemented above is a prime example of an object that relies on "simpler" objects, namely its hands, for its functionality. This is the fundamental principle of object-oriented programming: building programs from small, distinct objects that collaborate with one another.
 
 
 <programming-exercise name='One Minute'>
@@ -203,7 +203,7 @@ The `Timer` class should have the following methods:
 - `public Timer()`: creates a new timer.
 - `public String toString()`: returns a string representation of the timer in the format "seconds: hundredths of a second", where both the seconds and the hundredths of a second are represented by two numbers. For example, "19:83" would represent the time 19 seconds, 83 hundredths of a second.
 - `public void advance()`: moves the timer forward by a hundredth of a second.
-You can test the timer's functionality in the main program provided. The program prints the timer and advances it once every hundredth of a second. Once you've finished implementing the `Timer` class, please return it to the server.
+You can test the timer's functionality in the main program provided. The program prints the timer and advances it once every hundredth of a second. Once you've finished implementing the `Timer` class, please return the value.
 
 ```java
 Timer timer = new Timer();
