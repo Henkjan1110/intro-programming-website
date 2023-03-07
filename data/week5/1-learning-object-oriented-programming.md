@@ -203,7 +203,7 @@ The `Timer` class should have the following methods:
 - `public Timer()`: creates a new timer.
 - `public String toString()`: returns a string representation of the timer in the format "seconds: hundredths of a second", where both the seconds and the hundredths of a second are represented by two numbers. For example, "19:83" would represent the time 19 seconds, 83 hundredths of a second.
 - `public void advance()`: moves the timer forward by a hundredth of a second.
-You can test the timer's functionality in the main program provided. The program prints the timer and advances it once every hundredth of a second. Once you've finished implementing the `Timer` class, please return the value.
+You can test the timer's functionality in the main program provided. The program prints the timer and advances it once every hundredth of a second.
 
 ```java
 Timer timer = new Timer();
