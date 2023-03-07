@@ -12,13 +12,13 @@ hidden: false
 
 </text-box>
 
-So, what's object-oriented programming all about?
+Let's take a moment to explore the concept of object-oriented programming.
 
-Let's step back for a moment and inspect how a clock works. The clock has three hands: hours, minutes and seconds. The second-hand grows once every second, the minute hand every sixty seconds, and the hour hand every sixty minutes. When the value of the second hand is 60, its value is set to zero, and the value of the minute hand grows by one. When the minute hand's value is 60, its value is set to zero, and the hour hand's value grows by one. When the hour hand's value is 24, it's set to zero.
+To understand it better, let's consider a clock. A clock typically has three hands: hours, minutes, and seconds. The second-hand advances once every second, the minute hand advances every sixty seconds, and the hour hand advances every sixty minutes. When the second-hand reaches a value of 60, it is reset to zero and the minute hand advances by one. Similarly, when the minute hand reaches a value of 60, it is reset to zero and the hour hand advances by one. When the hour hand reaches a value of 24, it is reset to zero.
 
-The time is always printed in the form `hours: minutes: seconds`, where two digits are used to represent the hour (e.g., 01 or 12) as well as the minutes and seconds.
+The time is usually displayed in the format `hours:minutes:seconds`, where two digits are used to represent each component of the time.
 
-The clock has been implemented below using integer variables (the printing could be in a separate method, but that has not been done here).
+In the example below, the clock has been implemented using integer variables. (Note that the printing could be handled in a separate method, but for simplicity, it is included within the code.)
 
 ```java
 int hours = 0;
@@ -67,13 +67,15 @@ while (true) {
 }
 ```
 
-As we can see by reading the example above, how a clock consisting of three `int` variables works is not clear to someone reading the code. By looking at the code, it's difficult to "see" what's going on. A famous <a href="https://en.wikipedia.org/wiki/Kent_Beck" target="_blank" rel="noopener"> programmer </a> once remarked *"Any fool can write code that a computer can understand .Good Programmers write code that humans can understand"*.
+As we can see in the example above, the working of a clock consisting of three `int` variables is not necessarily clear to someone reading the code. By looking at the code namely, it's difficult to "see" what's going on. A famous <a href="https://en.wikipedia.org/wiki/Kent_Beck" target="_blank" rel="noopener"> programmer </a> once remarked *"Any fool can write code that a computer can understand. Good Programmers write code that humans can understand"*.
 
 <br/>
 
-Our aim is to make the program more understandable.
+In order to enhance the clarity of the program, we can transform the concept of a clock hand into its own distinct class. This will provide a clear and organized way to handle the behavior of clock hands.
 
-Since a clock hand is a clear concept in its own right, a good way to improve the program's clarity would be to turn it into a class. Let's create a `ClockHand` class that describes a clock hand, which contains information about its value, upper limit (i.e., the point at which the value of the hand returns to zero), and provides methods for advancing the hand, viewing its value, and also printing the value in string form.
+To accomplish this, we can create a `ClockHand` class that defines the properties of a clock hand, including its current value and upper limit (i.e., the value at which the hand resets to zero). Additionally, we can create methods within the class for advancing the hand, retrieving its current value, and printing the value in string form.
+
+By encapsulating the behavior of a clock hand within its own class, the overall program will become more intuitive and easier to understand. Below is an example implementation of the `ClockHand` class.
 
 ```java
 public class ClockHand {
@@ -107,7 +109,11 @@ public class ClockHand {
 }
 ```
 
-Once we've created the ClockHand class, our clock has become clearer. It's now straightforward to print the clock, i.e., the clock hand, and the hand's progression is hidden away in the ClockHand class. Since the the hand returns to the beginning automatically with the help of the upper-limit variable defined by the ClockHand class, the way the hands work together is slightly different than in the implementation that used integers. That one looked at whether the value of the integer that represented the clock hand exceeded the upper limit, after which its value was set to zero and the value of the integer representing the next clock hand was incremented. Using clock-hand objects, the minute hand advances when the second hand's value is zero, and the hour hand advances when the minute hand's value is zero.
+By creating the `ClockHand` class, the behavior of the clock has become much clearer. We can now easily print the clock hand, while the hand's progression is handled internally by the `ClockHand` class.
+
+In contrast to the previous implementation that used integers to represent the clock hands, the use of clock-hand objects changes the way the hands work together. The `ClockHand` class includes an upper-limit variable that automatically resets the hand to zero once it reaches the upper limit. As a result, the minute hand advances only when the second hand's value is zero, and the hour hand advances only when the minute hand's value is zero.
+
+Overall, this new approach provides a clearer and more intuitive way to represent the behavior of a clock. The following code demonstrates the updated `ClockHand` class in action.
 
 ```java
 ClockHand hours = new ClockHand(24);
@@ -132,11 +138,17 @@ while (true) {
 }
 ```
 
-**Object-oriented programming is primarily about isolating concepts into their own entities or, in other words, creating abstractions**. Despite the previous example, one might deem it pointless to create an object containing only a number since the same could be done directly with `int` variables. However, that is not always the case.
+**Object-oriented programming is fundamentally about separating concepts into distinct entities, or in other words, creating abstractions.** Despite the previous example, one might question the value of creating an object that contains only a number, since the same could be achieved with `int` variables. However, there are many reasons why separating a concept into its own class is beneficial.
 
-Separating a concept into its own class is a good idea for many reasons. Firstly, certain details (such as the rotation of a hand) can be hidden inside the class (i.e., **abstracted**). Instead of typing an if-statement and an assignment operation, it's enough for the one using the clock hand to call a clearly-named method `advance()`. The resulting clock hand may be used as a building block for other programs as well - the class could be named `CounterLimitedFromTop`, for instance. That is, a class created from a distinct concept can serve multiple purposes. Another massive advantage is that since the details of the implementation of the clock hand are not visible to its user, they can be changed if desired.
+Firstly, the details of a concept can be hidden or abstracted within the class. For instance, the rotation of a clock hand can be handled by a clearly named method such as `advance()`, rather than requiring an if-statement and assignment operation each time the hand needs to be moved. Furthermore, a class created to represent a distinct concept, such as a clock hand, can be reused in other programs and given a new name such as `CounterLimitedFromTop`.
 
-We realized that the clock contains three hands, i.e., it consists of three concepts. The clock is a concept in and of itself. As such, we can create a class for it too. Next, we create a class called "Clock" that hides the hands inside of it.
+Another significant advantage of using classes is that the implementation details of a class can be changed without affecting the external interface or behavior of the class. This allows for greater flexibility and easier maintenance of code.
+
+In the case of a clock, there are three distinct hands, each representing a separate concept. By creating a class to represent the clock, we can encapsulate the hands within it and provide a simpler and more intuitive interface to the user. Thus, we can create a class called `Clock` that hides the hands inside it.
+
+Overall, by separating related concepts into their own classes, we can create more modular, reusable, and maintainable code. Below is an example implementation of the `Clock` class.
+
+
 
 ```java
 public class Clock {
@@ -168,7 +180,7 @@ public class Clock {
 }
 ```
 
-The way the program functions has become increasingly clearer. When you compare our program below to the original one that was made up of integers, you'll find that the program's readability is superior.
+This way, the functioning of the program has become clearer. When you compare our program below to the original one, which used only integers as variables, you'll find that the program's readability is superior.
 
 ```java
 Clock clock = new Clock();
@@ -179,22 +191,19 @@ while (true) {
 }
 ```
 
-The clock we implemented above is an object whose functionality is based on "simpler" objects, i.e., its hands. This is precisely the **great idea behind ​​object-oriented programming: a program is built from small and distinct objects that work together**
+The clock we implemented above is a prime example of an object that relies on "simpler" objects, namely its hands, for its functionality. This is the fundamental principle of object-oriented programming: building programs from small, distinct objects that collaborate with one another.
 
 
 <programming-exercise name='One Minute'>
 
-The exercise template comes with the "ClockHand" class described above. Implement a `Timer` class based on the material's `Clock` class.
+Implement a new `Timer` class based on the `Clock` class provided above. The timer should have two hands, one for hundredths of a second and one for seconds. As the timer progresses, the number of hundredths of a second should increase by one. Once the hundredths hand reaches a value of 100, it should be reset to zero, and the seconds hand should increase by one. Similarly, when the seconds hand reaches a value of 60, it should be reset to zero.
 
-The timer has two hands, one for hundredths of a second and one for seconds. As it progresses, the number of hundredths of a second grows by one. When the hand corresponding to hundredths of a second reaches a value of 100, its value is set to zero, and the number of seconds grows by one. In the same way, when the value of the hand corresponding to seconds reaches the value of sixty, its value is set to zero.
+The `Timer` class should have the following methods:
 
-- `public Timer()` creates a new timer.
-- `public String toString()` returns a string representation of the timer. The string representation should be in the form "seconds: hundredths of a second", where both the seconds and the hundredths of a second are represented by two numbers. For example, "19:83" would represent the time 19 seconds, 83 hundredths of a second.
-- `public void advance()` moves the timer forward by a hundredth of a second.
-
-Once you've completed the task, return it to the server.
-
-You can test out the timer's functionality in the main program whenever you like. The example code below provides you with a program where the timer is printed and it advances once every hundredth of a second.
+- `public Timer()`: creates a new timer.
+- `public String toString()`: returns a string representation of the timer in the format "seconds: hundredths of a second", where both the seconds and the hundredths of a second are represented by two numbers. For example, "19:83" would represent the time 19 seconds, 83 hundredths of a second.
+- `public void advance()`: moves the timer forward by a hundredth of a second.
+You can test the timer's functionality in the main program provided. The program prints the timer and advances it once every hundredth of a second.
 
 ```java
 Timer timer = new Timer();
@@ -219,17 +228,13 @@ Next, let's review topic terminology.
 
 ## Object
 
-An **Object** refers to an independent entity that contains both data (instance variables) and behavior (methods). Objects may come in lots of different forms: some may describe problem-domain concepts, others are used to coordinate the interaction that happens between objects. Objects interact with one another through method calls -- these method calls are used to both request information from objects and give instructions to them.
+An Object is an entity that contains data (instance variables) and behavior (methods) and can take various forms. Objects interact with each other through method calls to request information or give instructions. Each object has its own clearly defined boundaries and behaviors, and is only aware of other objects it needs to perform its tasks. The object hides its internal operations, providing access to its functionality through defined methods, and is independent of any other object it doesn't require to accomplish its task.
 
-Generally, each object has clearly defined boundaries and behaviors and is only aware of the objects that it needs to perform its task. In other words, the object hides its internal operations, providing access to its functionality through clearly defined methods. Moreover, the object is independent of any other object that it doesn't require to accomplish its task.
+In the previous section, we used a "Person" class to define the blueprint for creating person objects, which had properties such as name, age, weight, and height, as well as methods. More variables related to a person, such as personal ID number, telephone number, address, and eye color, could also be added to the person object.
 
-In the previous section, we dealt with objects that represented people whose structure was defined in a "Person" class. It's a good idea to remind ourselves of what a class does: a **class** contains the blueprint needed to create objects, and also defines the objects' variables and methods. An object is created on the basis of the class constructor.
+When building an application that deals with people, the functionality and features related to a person are gathered based on the application's use case. For example, an application focused on personal health and well-being would likely track age, weight, height, and provide tools to calculate body mass index and maximum heart rate. In contrast, an application focused on communication would store people's email addresses and phone numbers, but would have no need for weight or height information.
 
-Our person objects had a name, age, weight and height property, along with a few methods. If we were to think about the structure of our person object some more, we could surely come up with more variables related to a person, such as a personal ID number, telephone number, address and eye color.
-
-In reality, we can relate all kinds of different information and things to a person. However, when building an application that deals with people, the **functionality and features related to a person are gathered based on the application's use case**. For example, an application focused on personal health and well-being would probably keep track of the variables mentioned earlier, such as age, weight, and height, and also provide the ability to calculate a body mass index and a maximum heart rate. On the other hand, an application focused on communication could store people's email addresses and phone numbers, but would have no need for information such as weight or height.
-
-**The state of an object** is the value of its internal variables at any given point in time.
+An object's state refers to the value of its internal variables at any given point in time.
 
 In the Java programming language, a Person object that keeps track of name, age, weight, and height, and provides the ability to calculate body mass index and maximum heart rate would look like the following. Below, the height and weight are expressed as doubles - the unit of length is one meter.
 
@@ -293,7 +298,7 @@ Napoleone Buonaparte, BMI: 27.68166089965398, maximum heart rate: 170.0390000000
 
 ## Class
 
-A class defines the types of objects that can be created from it. It contains instance variables describing the object's data, a constructor or constructors used to create it, and methods that define its behavior. A rectangle class is detailed below which defines the functionality of a rectangle.
+A class serves as a blueprint for creating objects. It includes instance variables that define the data of an object, a constructor or constructors used to create it, and methods that define its behavior. Below is an example of a rectangle class that provides the functionality of a rectangle.
 
 ```java
 // class
@@ -330,9 +335,9 @@ public class Rectangle {
 }
 ```
 
-Some of the methods defined above do not return a value (methods that have the keyword `void` in their definition), while others do (methods that specify the type of variable to be returned). The class above also defines the `toString` method, which returns the string used to print the object.
+The class presented above contains methods that return a value, as well as methods that do not return a value (indicated by the keyword `void` in their definition). The class also provides a `toString` method which returns a string representation of the object.
 
-Objects are created from the class through constructors by using the `new` command. Below, we'll create two rectangles and print information related to them.
+To create objects from the class, we use the `new` command with the appropriate constructor. In the example below, we create two rectangle objects and display information about them.
 
 ```java
 Rectangle first = new Rectangle(40, 80);
@@ -358,7 +363,7 @@ System.out.println(first.surfaceArea());
 
 Create a "Book" class that describes a book. Each book has an author, title, and page count.
 
-Make the class a:
+In this class, make a:
 
 - Constructor `public Book(String author, String name, int pages)`
 - Method `public String getAuthor()` that returns the book's author's name.
@@ -383,7 +388,7 @@ J. K. Rowling, Harry Potter and the Sorcerer's Stone, 223 pages
 
 For example, if a person has a maximum heart rate of `200`, a resting heart rate of `50`, and a target heart rate of `75%` of the maximum heart rate, the target heart rate should be about `((200-50) * (0.75) + 50)`, i.e., `162.5` beats per minute.
 
-Create a class called `Fitbyte`. Its constructor takes both an age and a resting heart rate as its parameters. The exercise assistant should provide a method targetHeartRate, which is passed a number of type double as a parameter that represents a percentual portion of the maximum heart rate. The proportion is given as a number between zero and one. The class should have:
+Create a class called `Fitbyte`. Its constructor takes both the age and resting heart rate as its parameters. The exercise assistant should provide a method targetHeartRate, which is passed a number of type `double` as a parameter that represents a percentual portion of the maximum heart rate. The proportion is given as a number between zero and one. The class should have:
 
 - A constructor `public Fitbyte(int age, int restingHeartRate)`
 - A method `public double targetHeartRate(double percentageOfMaximum)` that calculates and returns the target heart rate.
