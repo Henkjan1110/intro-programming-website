@@ -180,7 +180,7 @@ public class Clock {
 }
 ```
 
-This way the functions in the program have become increasingly clearer. When you compare our program below to the original one, which used only integers as variables, you'll find that the program's readability is superior.
+This way, the functioning of the program has become clearer. When you compare our program below to the original one, which used only integers as variables, you'll find that the program's readability is superior.
 
 ```java
 Clock clock = new Clock();
