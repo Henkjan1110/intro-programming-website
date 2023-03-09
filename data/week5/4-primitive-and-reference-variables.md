@@ -244,7 +244,7 @@ The program begins its execution from the first line of the main method, where a
 
 On the third line of the main method, the value of the `first` variable is printed using the `System.out.println` method. This method searches for the `toString` method on the object referenced by the `first` variable. Since the `Person` class has its own `toString` method, that method is called on the object referenced by `first`. The `name` variable in that object has the value "First", and the `birthYear` variable has the value 1970, so the output becomes "First (1970)".
 
-On the fourth line, the `youthen` method is called with the `first` variable passed as an argument. When the `youthen` method is called, the value of the `first` variable is copied and passed as a parameter to the `youthen` method. The execution of the `main` method waits in the call stack. Since the `first` variable is a reference type, the reference to the object created earlier is passed to the method. At the end of the `youthen` method execution, the birth year of the object referenced by the `first` variable is incremented by one.
+On the fourth line, the `youthen` method is called with the `first` variable passed as an argument. When the `youthen` method is called, the value of the `first` variable is copied and passed as a parameter to the `youthen` method. The execution of the `main` method waits in the call stack. Since the `first` variable is a reference type, the reference to the object created earlier is copied for the method to use. At the end of the `youthen` method execution, the birth year of the object referenced by the `first` variable is incremented by one.
 
 
 <img src="../img/drawings/part5.3-first-2-tm.png"/>
