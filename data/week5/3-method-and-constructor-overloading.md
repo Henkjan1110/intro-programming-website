@@ -77,7 +77,7 @@ public class Person {
 }
 ```
 
-All `person` objects are 0 years old when created. This is because the constructor sets the value of the instance variable `age` to 0:
+All `Person` objects are 0 years old when created. This is because the constructor sets the value of the instance variable `age` to 0:
 
 ```java
 public Person(String name) {
@@ -129,7 +129,7 @@ Ada is 0 years old.
 
 </sample-output>
 
-The technique of having multiple constructors in a class with different parameters is known as constructor overloading. A class can have multiple constructors that differ in the number and/or type of their parameters. However, it's not possible to have two constructors with the exact same parameters.
+The technique of having multiple constructors in a class with different parameters is known as *constructor overloading*. A class can have multiple constructors that differ in the number and/or type of their parameters. However, it's not possible to have two constructors with the exact same parameters.
 
 For example, adding a `public Person(String name, int weight)` constructor would not be possible because Java would not be able to differentiate it from the existing constructor that has two parameters where the int parameter is used for age.
 
