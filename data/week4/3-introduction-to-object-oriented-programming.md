@@ -6,7 +6,7 @@ hidden: false
 
 <text-box variant='learningObjectives' name='Learning Objectives'>
 
-- You're familiar with the concepts of class, object, constructor, object methods, and object variables.
+- You are familiar with the concepts of class, object, constructor, object methods, and object variables.
 
 - You understand that a class defines an object's methods and that the values of instance (object) variables are object-specific.
 
@@ -14,18 +14,20 @@ hidden: false
 
 </text-box>
 
-We'll now begin our journey in to the world of object-oriented programming. We'll start with focusing on describing concepts and data using objects. From there on, we'll learn how to add functionality, i.e., methods to our program.
+Let's dive into the basics of object-oriented programming, a programming style that helps us organize and manage our code more effectively. We will focus on representing ideas and information with objects, and then add functionality to our program using methods.
 
-Object-oriented programming is concerned with isolating concepts of a problem domain into separate entities and then using those entities to solve problems. Concepts related to a problem can only be considered once they've been identified. In other words, we can form abstractions from problems that make those problems easier to approach.
+Object-oriented programming (OOP) is a way to break down complex problems into smaller, more manageable pieces. It does this by representing the different aspects of a problem as separate entities called objects. By doing this, we can create abstractions that simplify the problem-solving process.
 
-Once concepts related to a given problem have been identified, we can also begin to build constructs that represent them into programs. These constructs, and the individual instances that are formed from them, i.e., objects, are used in solving the problem. The statement "programs are built from small, clear, and cooperative objects" may not make much sense yet. However, it will appear more sensible as we progress through the course, perhaps even self-evident.
+To begin with, we identify the main ideas or components related to a problem. We then create structures in our code, called classes, to represent these ideas. Classes are like blueprints for creating objects, which are the actual instances of these ideas in our programs. These objects help us tackle the problem at hand by interacting and cooperating with one another.
+
+The idea that "programs are built from small, clear, and cooperative objects" might not make perfect sense right now, but as we explore object-oriented programming further, this concept will become clearer and more intuitive.
 
 ## Classes and Objects
-We've already used some classes and objects provided by Java. A **class** defines the attributes of objects, i.e., the information related to them (instance variables), and their commands, i.e., their methods. The values of instance (i.e., object) variables define the internal state of an individual object, whereas methods define the functionality it offers.
+We have already utilized some of Java's classes and objects. A **class** defines an object's attributes, such as its related information (instance variables), and its methods or commands. The object's internal state is determined by the values of its instance variables, while its functionality is determined by its methods.
 
-A **Method** is a piece of source code written inside a class that's been named and has the ability to be called. A method is always part of some class and is often used to modify the internal state of an object instantiated from a class.
+A **Method** is a named piece of source code that can be called and is typically written inside a class. A method is always associated with a class and is frequently employed to modify the internal state of an instantiated object.
 
-As an example, `ArrayList` is a class offered by Java, and we've made use of objects instantiated from it in our programs. Below, an `ArrayList` object named `integers` is created and some integers are added to it.
+For example, Java's `ArrayList` class has been employed in our programs, with objects instantiated from it. Below, we create an `ArrayList` object named `integers` and add several integers to it.
 
 ```java
 // we create an object from the ArrayList class named integers
@@ -49,7 +51,7 @@ A class lays out a blueprint for any objects that are instantiated from it. Let'
 
 <img src="../img/rintamamiestalo-rakennuspiirrustus.jpg"/>
 
-Individual objects, detached houses in this case, are all created based on the same blueprints - they're instances of the same class. The states of individual objects, i.e., their attributes (such as the wall color, the building material of the roof, the color of its foundations, the doors' materials and color, ...) may all vary, however. The following is an "object of a detached-house class":
+Individual objects (detached houses in this case) are all created based on the same blueprints - they're instances of the same class. The states of individual objects, i.e., their attributes (such as the wall color, the building material of the roof, the color of its foundations, the doors' materials and color, ...) may all vary, however. The following is an "object of a detached-house class":
 
 <img src="../img/rintamamiestalo.jpg" />
 
@@ -83,15 +85,11 @@ Write a program that creates an account with a balance of 100.0, deposits 20.0 i
 
 ## Creating Classes
 
-A class specifies what the objects instantiated from it are like.
+In programming, a class defines the properties and behaviors of objects instantiated from it. The object's variables, also known as instance variables, describe the object's internal state, while its methods describe what the object can do.
 
-- The **object's variables (instance variables)** specify the internal state of the object
-- The **object's methods** specify what the object does
+To create our own classes, we need to define the variables that belong to them. We usually define a class to represent a meaningful entity, which can be a real-world object or concept. For example, if our program needs to process personal information, we can define a separate `Person` class consisting of methods and attributes related to an individual.
 
-We'll now familiarize ourselves with creating our own classes and defining the variable that belong to them.
-
-A class is defined to represent some meaningful entity, where a "meaningful entity" often refers to a real-world object or concept. If a computer program had to process personal information, it would perhaps be meaningful to define a seperate class `Person` consisting of methods and attributes related to an individual.
-Let's begin. We'll assume that we have a project template that has an empty main program:
+Now, let's get started. Assume that we have a project template that has an empty main program:
 
 ```java
 public class Main {
@@ -109,7 +107,7 @@ As with variables and methods, the name of a class should be as descriptive as p
 
 </text-box>
 
-Let's create a class named `Person`. For this class, we create a separate file named `Person.java`. Our program now consists of two separate files since the main program is also in its own file. The `Person.java` file initially contains the class definition **public class Person** and the curly brackets that confine the contents of the class.
+Let us create a class named `Person`, for which we need to create a separate file called `Person.java`. As a result, our program will consist of two separate files, with the main program remaining in its own file. The `Person.java` file should initially contain the class definition, which is denoted by the keyword `public class Person`, along with the curly brackets that contain the class's contents.
 
 ```java
 public class Person {
@@ -121,7 +119,7 @@ You can also draw a class diagram to depict a class. We'll become familiar with 
 
 <img src="../img/diagrams/part4.1-classdiagram-person.png">
 
-A class defines the attributes and behaviors of objects that are created from it. Let's decide that each person object has a name and an age. It's natural to represent the name as a string, and the age as an integer. We'll go ahead and add these to our blueprint:
+A class defines the attributes and behaviors of objects that are instantiated from it. For our `Person` class, let's specify that each person object has a name and an age. We can represent the name as a string and the age as an integer. Let's add these attributes to our class blueprint:
 
 ```java
 public class Person {
@@ -130,18 +128,20 @@ public class Person {
 }
 ```
 
-We specify above that each object created from the `Person` class has a `name` and an `age`. Variables defined inside a class are called **instance variables**, or object fields or object attributes. Other names also seem to exist.
+As mentioned earlier, each object created from the `Person` class has a `name` and an `age`. These variables are called **instance variables**, object fields, or object attributes.
 
-Instance variables are written on the lines following the class definition `public class Person {`. Each variable is preceded by the keyword private. The keyword **private** means that the variables are "hidden" inside the object. This is known as **encapsulation**.
+To define these instance variables, we write them on separate lines following the class definition `public class Person {`. Each variable should be preceded by the **private** keyword. This keyword indicates that the variables are "hidden" inside the object and **encapsulated** within the class.
 
-In the class diagram, the variables associated with the class are defined as "variableName: variableType". The minus sign before the variable name indicates that the variable is encapsulated (it has the keyword private).
+In a class diagram, the variables associated with the class are denoted as "variableName: variableType". The minus sign preceding the variable name indicates that the variable is encapsulated, meaning it has the `private` keyword.
 
 <img src="../img/diagrams/part4.1-classdiagram-person-name-age.png">
 
-We have now defined a blueprint -- a class -- for the person object. Each new person object has the variables `name` and `age`, which are able to hold object-specific values. The "state" of a person consists of the values assigned to their name and age.
+We have now defined a blueprint -- a class -- for the `Person` object. Each new `Person` object has the variables `name` and `age`, which are able to hold object-specific values. The "state" of a person consists of the values assigned to their name and age.
 
 ## Defining a Constructor
-We want to set an initial state for an object that's created. Custom objects are created the same way as objects from pre-made Java classes, such as `ArrayList`, using the `new` keyword. It'd be convenient to pass values ​​to the variables of that object as it's being created. For example, when creating a new person object, it's useful to be able to provide it with a name:
+To set an initial state for an object when it's created, we can use the `new` keyword to create a new instance of the object. Similar to objects created from pre-made Java classes, such as `ArrayList`, we can pass values to the variables of our `Person` object during instantiation.
+
+For instance, when creating a new `Person` object, it's convenient to provide it with a name. Here's an example of how to do this:
 
 ```java
 public static void main(String[] args) {
@@ -150,7 +150,7 @@ public static void main(String[] args) {
 }
 ```
 
-This is achieved by defining the method that creates the object, i.e., its constructor. The constructor is defined after the instance variables. In the following example, a constructor is defined for the Person class, which can be used to create a new Person object. The constructor sets the age of the object being created to 0, and the string passed to the constructor as a parameter as its name:
+The process of creating this object is accomplished by defining a method, known as the constructor. The constructor is defined after the instance variables. Here is an example: consider the Person class, for which a constructor is defined to create a new Person object. Upon instantiation, the constructor initializes the age of the object to 0, and sets the name of the object to the string passed as a parameter.
 
 ```java
 public class Person {
@@ -164,17 +164,17 @@ public class Person {
 }
 ```
 
-The constructor's name is always the same as the class name. The class in the example above is named Person, so the constructor will also have to be named Person. The constructor is also provided,  as a parameter, the name of the person object to be created. The parameter is enclosed in parentheses and follows the constructor's name. The parentheses that contain optional parameters are followed by curly brackets. In between these brackets is the source code that the program executes when the constructor is called (e.g., `new Person ("Ada")`).
+The constructor in any class must have the same name as the class. In the aforementioned Person class, the constructor will also be named Person. When defining the constructor, it is important to note that it takes in the name of the person object to be created as a parameter enclosed in parentheses following the constructor's name. Optional parameters are enclosed in parentheses and are followed by curly braces, which contain the program's source code executed when the constructor is called (e.g., `new Person("Ada")`).
 
-Objects are always created using a constructor.
-
-A few things to note: the constructor contains the expression `this.age = 0`. This expression sets the instance variable `age` of the newly created object (i.e., "this" object's age) to 0. The second expression `this.name = initialName` likewise assigns the string passed as a parameter to the instance variable `name` of the object created.
+It's worth noting that objects are always created using constructors. In the given example, the constructor includes the expression `this.age = 0`, which assigns a value of 0 to the newly created object's instance variable `age`. Similarly, `this.name = initialName` assigns the passed string as a parameter to the instance variable `name` of the created object.
 
 <img src="../img/diagrams/part4.1-classdiagram-person-name-age-constructor.png">
 
 <text-box variant='hint' name='Default Constructor'>
 
-If the programmer does not define a constructor for a class, Java automatically creates a default one for it. A default constructor is a constructor that doesn't do anything apart from creating the object. The object's variables remain uninitialized (generally, the value of any object references will be `null`, meaning that they do not point to anything, and the values of primitives will be `0`)
+Java provides a default constructor for a class if the programmer does not define one. This default constructor does not perform any operations apart from creating the object. As a result, the object's variables remain uninitialized, and any object references will be `null`, meaning they do not point to anything. The values of primitives will be set to `0`.
+
+
 
 For example, an object can be created from the class below by making the call `new Person()`
 
@@ -185,7 +185,9 @@ public class Person {
 }
 ```
 
-If a constructor has been defined for a class, no default constructor exists. For the class below, calling `new Person` would cause an error, as Java cannot find a constructor in the class that has no parameters.
+If a constructor has already been defined for a class, no default constructor exists for that class. Therefore, if `new Person` were to be called for the class below, an error would occur as Java cannot find a constructor in the class that does not take any parameters:
+
+
 
 ```java
 public class Person {
@@ -202,7 +204,9 @@ public class Person {
 </text-box>
 
 ## Defining Methods For an Object
-We know how to create an object and initialize its variables. However, an object also needs methods to be able to do anything. As we've learned, a **method** is a named section of source code inside a class which can be invoked.
+Creating an object and initializing its variables is just the first step in using an object. To enable an object to perform operations, it must also have methods defined. A **method** is a named section of source code inside a class that can be called upon to execute certain tasks.
+
+
 
 ```java
 public class Person {
@@ -220,7 +224,7 @@ public class Person {
 }
 ```
 
-A method is written inside the class beneath the constructor. The method name is preceded by `public void`, since the method is intended to be visible to the outside world (`public`), and it does not return a value (`void`).
+A method is written inside the class, typically beneath the constructor. The method name is preceded by `public void`, since the method is intended to be visible to the outside world (`public`), and not return a value (`void`).
 
 <text-box variant='hint' name='Objects and the Static Modifier'>
 
@@ -230,13 +234,15 @@ Going forward, our methods will not include the `static` keyword if they're used
 
 </text-box>
 
-In addition to the class name, instance variables and constructor, the class diagram now also includes the method `printPerson`. Since the method comes with the `public` modifier, the method name is prefixed with a plus sign. No parameters are defined for the method, so nothing is put inside the method's parentheses. The method is also marked with information indicating that it does not return a value, here `void`.
+In addition to the class name, instance variables, and constructor, the class diagram now includes a new method called `printPerson`. In the diagram, the method is denoted with a `+` symbol preceding its name, indicating that it is a `public` method. Since the method takes no parameters, an empty set of parentheses is included after the method name. Finally, the method is marked with the keyword `void`, indicating that it does not return any value.
+
+
 
 <img src="../img/diagrams/part4.1-classdiagram-person-name-age-constructor-print.png">
 
-The method `printPerson` contains one line of code that makes use of the instance variables `name` and `age` -- the class diagram says nothing about its internal implementations. Instance variables are referred to with the prefix `this`. All the object's variables are visible and available from within the method.
+The `printPerson` method contains a single line of code that uses the instance variables `name` and `age` of the object. The internal implementation of the method is not specified in the class diagram. Instance variables are accessed using the `this` keyword, which refers to the current object. All of the object's variables are visible and accessible from within the method.
 
-Let's create three persons in the main program and request them to print themselves:
+To demonstrate this method, we can create three `Person` objects in the main program and call the `printPerson` method on each object to print its details:
 
 ```java
 public class Main {
@@ -265,7 +271,7 @@ Martin, age 0 years
 
 <programming-exercise name='Door'>
 
-Create a class named `Door`. The door does not have any variables. Create for it a constructor with no parameters (or use the default constructor). After that, create a `public void knock()` method for the door that prints the message "Who's there?" when called.
+Create a class named `Door`. The door does not have any variables. Create a constructor for it with no parameters (or use the default constructor). After that, create a `public void knock()` method for the door that prints the message "Who's there?" when called.
 
 The door should work as follows.
 
@@ -306,7 +312,7 @@ The output above is based on the product being assigned the name `Banana`, with 
 
 
 ## Changing an Instance Variable's Value in a Method
-Let's add a method to the previously created person class that increments the age of the person by a year.
+Let's add a method to the previously created `Person` class that increments the age of the person by a year.
 
 ```java
 public class Person {
@@ -329,7 +335,7 @@ public class Person {
 }
 ```
 
-The method is written inside the `Person` class just as the `printPerson` method was. The method increments the value of the instance variable `age` by one.
+The method is written inside the `Person` class, just as the `printPerson` method was. The method increments the value of the instance variable `age` by one.
 
 The class diagram also gets an update.
 
@@ -369,9 +375,9 @@ Antti, age 0 years
 
 </sample-output>
 
-That is to say that when the two objects are "born" they're both zero-years old (`this.age = 0;` is executed in the constructor). The `ada` object's `growOlder` method is called twice. As the print output demonstrates, the age of Ada is 2 years after growing older. Calling the method on an object corresponding to Ada has no impact on the age of the other person object since each object instantiated form a class has its own instance variables.
+That is to say that when the two objects are "born" they are both zero years old (`this.age = 0;` is executed in the constructor). The `ada` object's `growOlder` method is called twice. As the print output demonstrates, the age of Ada is 2 years after growing older. Calling the method on an object corresponding to Ada has no impact on the age of the other person object, since each object instantiated form a class has its own instance variables.
 
-The method can also contain conditional statements and loops. The growOlder method below limits aging to 30 years.
+The method can also contain conditional statements and loops. The `growOlder` method below limits aging to 30 years.
 
 ```java
 public class Person {
@@ -400,7 +406,7 @@ public class Person {
 
 Create the class `Debt` that has double-typed instance variables of `balance` and `interestRate`. The balance and the interest rate are passed to the constructor as parameters `public Debt(double initialBalance, double initialInterestRate)`.
 
-In addition, create the methods `public void printBalance()` and `public void waitOneYear()` for the class. The method printBalance prints the current balance, and the waitOneYear method grows the debt amount.
+In addition, create the methods `public void printBalance()` and `public void waitOneYear()` for the class. The method `printBalance` prints the current balance, and the `waitOneYear` method grows the debt amount.
 
 The debt is increased by multiplying the balance by the interest rate.
 
@@ -440,14 +446,14 @@ Prints:
 
 </sample-output>
 
-When you've managed to get the program to work, check the previous example with the early 1900s recession interest rates as well.
-
 Once you get the program to work, try out the previous example with the interest rates of the early 1990s recession when the interest rates were as high as 15-20% - try swapping the interest rate in the example above with `1.20` and see what happens.
 
 </programming-exercise>
 
 ## Returning a Value From a Method
-A method can return a value. The methods we've created in our objects haven't so far returned anything. This has been marked by typing the keyword _void_ in the method definition.
+A value can be returned by a method. However, the methods that have been created in our objects until now have not returned anything, as indicated by the keyword **void** in their method definition.
+
+
 
 ```java
 public class Door {
@@ -459,7 +465,7 @@ public class Door {
 
 The keyword **void** means that the method does not return a value.
 
-If we want the method to return a value, we need to replace the `void` keyword with the type of the variable to be returned. In the following example, the Teacher class has a  method `grade` that always returns an integer-type (`int`) variable (in this case, the value 10). The value is always returned with the  **return** command:
+To enable a method to return a value, the `void` keyword in the method signature must be replaced with the type of variable that will be returned. The following example demonstrates how the `grade` method in the `Teacher` class returns an integer (`int`) variable, which is always set to the value of 10 using the `return` statement:
 
 ```java
 public class Teacher {
@@ -469,7 +475,8 @@ public class Teacher {
 }
 ```
 
-The method above returns an `int` type variable of value 10 when called. For the return value to be used, it needs to be assigned to a variable. This happens the same way as regular value assignment, i.e., by using the equals sign:
+When called, the method mentioned above returns an `int` type variable with a value of 10. To use the returned value, it must be assigned to a variable using the equals sign, just like regular value assignment. Here is an example of how this can be done:
+
 
 ```java
 public static void main(String[] args) {
@@ -487,7 +494,7 @@ The grade received is 10
 
 </sample-output>
 
-The method's return value is assigned to a variable of type `int` value just as any other int value would be. The return value could also be used to form part of an expression.
+The method's return value is assigned to a variable of type `int` value just as any other `int` value would be. The return value could also be used to form part of an expression.
 
 ```java
 public static void main(String[] args) {
@@ -507,7 +514,7 @@ Grading average 10.0
 
 </sample-output>
 
-All the variables we've encountered so far can also be returned by a method. To sum:
+All the variables we've encountered so far can also be returned by a method. To summarize:
 
 - A method that returns nothing has the `void` modifier as the type of variable to be returned.
 
@@ -541,7 +548,7 @@ public double methodThatReturnsADouble() {
 }
 ```
 
-Let's continue with the Person class and add a `returnAge` method that returns the person's age.
+Let's continue with the `Person` class and add a `returnAge` method that returns the person's age.
 
 ```java
 public class Person {
@@ -569,7 +576,7 @@ public class Person {
 }
 ```
 
-The class in its entirety:
+So the class in its entirety is structured as follows:
 
 <img src="../img/diagrams/part4.1-classdiagram-person-name-age-constructor-print-grow-return.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(String);+tulostaHenkilo():void;+vanhene():void;+palautaIka():int]">
 
@@ -605,9 +612,7 @@ Pekka's and Antti's combined age 3 years
 
 </sample-output>
 
-As we came to notice, methods can contain source code in the same way as other parts of our program. Methods can have conditionals or loops, and other methods can also be called from them.
-
-Let's now write a method for the person that determines if the person is of legal age. The method returns a boolean - either `true` or `false`:
+As we have observed, methods can include any valid source code, such as conditionals, loops, and calls to other methods. In this example, we will create a method that checks if a person is of legal age and returns a `boolean` value (`true` if they are of legal age, and `false` if they are not).
 
 ```java
 public class Person {
@@ -673,7 +678,7 @@ of legal age: Pekka, age 30 years
 
 </sample-output>
 
-Let's fine-tune the solution a bit more. In its current form, a person can only be "printed" in a way that includes both the name and the age. Situations exist, however, where we may only want to know the name of an object. Let's write a separate method for this use case:
+In the previous example, the `Person` class could only be printed in a way that included both the name and the age. However, in some situations, we may only need to know the name of an object. To address this need, we can create a separate method that returns only the name of the `Person` object. This method can be called from other parts of our program to obtain the name of the object without including the age. This added flexibility allows us to choose whether to display only the name or both the name and the age, depending on the needs of our program.
 
 ```java
 public class Person {
@@ -685,9 +690,9 @@ public class Person {
 }
 ```
 
-The `getName` method returns the instance variable `name` to the caller. The name of this method is somewhat strange. It is the convention in Java to name a method that returns an instance variable exactly this way, i.e., `getVariableName`. Such methods are often referred to as "getters".
+In Java, it is customary to name a method that returns an instance variable using the `getVariableName` naming convention. Such methods are called "getters". In the context of the `Person` class, `getName` is a more appropriate method name that conforms to this convention. Using this naming convention creates a more intuitive API, makes the code more readable, and is easier for other programmers to understand.
 
-The class as a whole:
+The class as a whole is now as follows:
 
 <img src="../img/diagrams/part4.1-classdiagram-person-getters.png" alt="[Henkilo|-nimi:String;-ika:int|+Henkilo(String);+tulostaHenkilo():void;+vanhene():void;+palautaIka():int;+taysiIkainen():boolean;+getNimi():String]">
 
@@ -772,7 +777,7 @@ Not full! Value: 4
 </programming-exercise>
 
 ## A string representation of an object and the toString-method
-We are guilty of programming in a somewhat poor style by creating a method for printing the object, i.e., the `printPerson` method. A preferred way is to define a method for the object that returns a "string representation" of the object. The method returning the string representation is always `toString` in Java. Let's define this method for the person in the following example:
+In the previous example, we created a `printPerson` method to print the `Person` object, which is not considered good programming practice. A better approach is to define a method for the object that returns a "string representation" of the object, which is achieved by defining the `toString` method in Java. Let's define this method for the person in the following example:
 
 ```java
 public class Person {
@@ -784,7 +789,7 @@ public class Person {
 }
 ```
 
-The `toString` functions as `printPerson` does. However, it doesn't itself print anything but instead returns a string representation, which the calling method can execute for printing as needed.
+The `toString` method in Java returns a string representation of an object, whereas the `printPerson` method prints the object directly to the console. By separating the generation of a string representation from its use, we can create more flexible and reusable code.
 
 The method is used in a somewhat surprising way:
 
@@ -806,7 +811,9 @@ public static void main(String[] args) {
 }
 ```
 
-In principle, the `System.out.println` method requests the object's string representation and prints it. The call to the `toString` method returning the string representation does not have to be written explicitly, as Java adds it automatically. When a programmer writes:
+In Java, the `System.out.println` method can be used to print an object's string representation. When this method is called on an object, Java automatically calls the object's `toString` method to generate the string representation.
+
+As a result, programmers do not have to explicitly call the `toString` method when using `System.out.println` to print an object. When a programmer writes:
 
 ```java
 System.out.println(antti);
@@ -819,7 +826,7 @@ System.out.println(antti.toString());
 ```
 
 As such, the call `System.out.println(antti)` calls the `toString` method of the `antti` object and prints the string returned by it.
-We can remove the now obsolete `printPerson` method from the Person class.
+This implies that we can remove the now obsolete `printPerson` method from the `Person` class.
 
 
 <programming-exercise name='Agent'>
@@ -938,11 +945,11 @@ public void setHeight(int height) {
 }
 ```
 
-In this case, `height` in the method refers specifically to a parameter named _height_ and `this.height` to an instance variable of the same name. For example, the following example would not work as the code does not refer to the instance variable _height_ at all. What the code does in effect is set the `height` variable received as a parameter to the value it already contains:
+In this case, `height` in the method refers specifically to a parameter named _height_ and `this.height` to an instance variable of the same name. For example, the following example would not work as the code does not refer to the instance variable _height_ at all. What the code does in effect is that it sets the `height` variable received as a parameter to the value it already contains:
 
 ```java
 public void setHeight(int height) {
-    // DON'T DO THIS!!!
+    // DO NOT DO THIS!!!
     height = height;
 }
 ```
@@ -991,7 +998,7 @@ multiplyByFour.multiply(1): 4
 </programming-exercise>
 
 ## Calling an internal method
-The object may also call its methods. For example, if we wanted the string representation returned by toString to also tell of a person's body mass index, the object's own `bodyMassIndex` method should be called in the `toString` method:
+The object can also invoke its own methods. For instance, if we wished to include a person's body mass index in the string representation returned by `toString`, we would need to call the object's `bodyMassIndex` method from within the `toString` method:
 
 ```java
 public String toString() {
@@ -999,7 +1006,7 @@ public String toString() {
 }
 ```
 
-So, when an object calls an internal method, the name of the method and this prefix suffice. An alternative way is to call the object's own method in the form `bodyMassIndex()`, whereby no emphasis is placed on the fact that the object's own bodyMassIndex method is being called:
+When an object calls an internal method, it is enough to use the method name and "this" prefix. Another way to call the object's own method is to use the method name directly, i.e., `bodyMassIndex()`. Both ways are valid, but the former makes it clearer that the method being called is an internal method of the object.
 
 ```java
 public String toString() {
