@@ -4,7 +4,7 @@ title: "Using existing classes in Java"
 hidden: false
 ---
 
-Throughout our course, we have been utilizing various built-in classes available in the Java programming language. These include classes like `Scanner`, `List`, and `String`. We have become accustomed to working with these classes and have learned how to use some of the methods they provide.
+Throughout our course, we have been using various built-in classes available in the Java programming language. These include classes like `Scanner`, `List`, and `String`. We have become accustomed to working with these classes and have learned how to use some of the methods they provide.
 
 These classes can come in handy when building a program that requires the user to input movies in their library and store them in a collection. Before we begin, let us take a look at the `Movie` class:
 
