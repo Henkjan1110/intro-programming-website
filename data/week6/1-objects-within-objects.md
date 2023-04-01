@@ -149,8 +149,6 @@ Tip: When a value is added to an `ArrayList`, it is appended to the end of the l
 
 ## Objects in an Instance Variable List
 
-An object's instance variable list can hold various types of objects as long as the type is specified when defining the list.
-
 In the previous section, we created an `AmusementParkRide` class to verify if a person met the requirements to go on a specific ride. Here's an example of how the `AmusementPark` class might look like:
 
 ```java
