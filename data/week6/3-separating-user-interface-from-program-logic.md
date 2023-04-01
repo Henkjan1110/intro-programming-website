@@ -756,7 +756,7 @@ To break down the program into more manageable parts, we can identify distinct a
 
 ### Program logic
 
-The program logic includes crucial parts that store information, like functionalities that keep track of grades. Using the previous example, we can separate the parts that store grade information and create a class called `GradeRegister`. This class will be responsible for keeping track of the number of different grades students have received. We can add grades to the register according to scores and use the register to ask how many people have received a certain grade.
+The program logic includes parts that are crucial for the execution of the program, like functionalities that store information. Using the previous example, we can separate the parts that store grade information and create a class called `GradeRegister`. This class will be responsible for keeping track of the number of different grades students have received. We can add grades to the register according to scores and use the register to ask how many people have received a certain grade.
 
 An example class follows:
 
