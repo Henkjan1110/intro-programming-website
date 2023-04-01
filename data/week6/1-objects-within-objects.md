@@ -234,7 +234,7 @@ public class AmusementParkRide {
 
 <programming-exercise name='MessagingService'>
 
-TThe exercise template includes a pre-defined `Message` class that can be utilized to create objects representing messages. Each message has a sender and some content.
+The exercise template includes a pre-defined `Message` class that can be utilized to create objects representing messages. Each message has a sender and some content.
 
 Implement the `MessagingService` class. The class must have a parameterless constructor and contain a list of `Message` objects. After that, add the following two methods to the class:
 
