@@ -4,7 +4,7 @@ title: 'Complex programs'
 hidden: false
 ---
 
-Learning programming not only teaches you how to write code, but it also helps you develop a better eye for reading code, both your own and others'. In this section, we have explored the use of lists and practiced separating the user interface (UI) from the program logic.
+Learning programming not only teaches you how to write code, but it also helps you develop a better eye for reading code, both your own and others'. In this week, we have explored the use of lists and practiced separating the user interface (UI) from the program logic.
 
 The following is from  [On the role of scientific thought](https://www.cs.utexas.edu/users/EWD/ewd04xx/EWD447.PDF) by Dutch computer scientist [Edsger W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra) .
 
