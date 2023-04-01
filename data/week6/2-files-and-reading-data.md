@@ -91,7 +91,7 @@ Computers have different programs for browsing files, which are specific to the 
 
 Files are essentially collections of data that reside on a computer's hard drive, which is essentially a massive series of ones and zeroes (i.e., bits) that store information. For example, a single variable of type "int" takes up 32 bits (i.e., 32 ones or zeroes), while modern terabyte-sized hard drives hold about 8 trillion bits (or 8,000,000,000,000).
 
-Despite their potentially massive size, files can be located almost anywhere on a hard drive, and they can even be split into multiple pieces. The computer's **filesystem** is responsible for keeping track of the locations of files on the hard drive, as well as for creating new files and modifying existing ones. Essentially, the filesystem acts as an abstraction layer that hides the underlying structure of the hard drive, allowing users and programs to access files without needing to know how or where they are actually stored.
+Files can be located almost anywhere on a hard drive, and they can even be split into multiple pieces. The computer's **filesystem** is responsible for keeping track of the locations of files on the hard drive, as well as for creating new files and modifying existing ones. Essentially, the filesystem acts as an abstraction layer that hides the underlying structure of the hard drive, allowing users and programs to access files without needing to know how or where they are actually stored.
 
 </text-box>
 
