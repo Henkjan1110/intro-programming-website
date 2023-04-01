@@ -89,7 +89,7 @@ System.out.println("Your current movie collection is:");
 System.out.println(collection);
 ```
 
-Note how we have utilized various methods provided by the built-in Java classes in this code snippet. For instance, we have employed the `nextLine` method of the `Scanner` class to retrieve user input, the `add` method of the `List` class to add elements to the list, and the parameterized constructor of the `String` class to create a new string object enclosed in double quotes.
+Note how we have used various methods provided by the built-in Java classes in this code snippet. For instance, we have employed the `nextLine` method of the `Scanner` class to retrieve user input, the `add` method of the `List` class to add elements to the list, and the parameterized constructor of the `String` class to create a new string object enclosed in double quotes.
 
 ## The Java class library
 If we want to include the release date for each movie, one approach is to create our own class to store the date. However, the `Java class library` already provides functionality for many common use cases. This library includes all the classes that are available by default in Java.
